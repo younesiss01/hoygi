@@ -12,17 +12,17 @@
 
   <style>
     :root {
-      --navy: #0c2d5a;
-      --royal: #134a8c;
-      --blue: #1a7fd4;
-      --cyan: #5ec4f5;
+      --navy: #0a254a;
+      --royal: #103e75;
+      --blue: #1464a8;
+      --cyan: #026ca3;
       --ice: #eef6fc;
       --white: #fcfdff;
-      --silver: #c5d4e3;
-      --gold: #c4a052;
-      --text: #1a2f45;
-      --muted: #4a6278;
-      --wa: #25d366;
+      --silver: #8fa1b3;
+      --gold: #8c6a1e;
+      --text: #111e2e;
+      --muted: #2f455a;
+      --wa: #1b8a43;
       --radius: 18px;
       --max: 680px;
       --font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -52,15 +52,15 @@
       padding-inline: 0.15em;
     }
     .benefits .hoygi-name,
-    .pain .hoygi-name { color: var(--cyan); text-shadow: none; }
+    .pain .hoygi-name { color: #82d8ff; text-shadow: none; }
 
     .prehead {
       background: linear-gradient(90deg, var(--navy), var(--royal));
-      color: #fff;
+      color: #ffffff;
       text-align: center;
-      font-size: 0.82rem;
-      font-weight: 600;
-      padding: 0.55rem 1rem;
+      font-size: 0.88rem;
+      font-weight: 700;
+      padding: 0.65rem 1rem;
     }
 
     /* Brand masthead */
@@ -68,7 +68,7 @@
       margin: 0;
       padding: 1.35rem 1rem 1.1rem;
       background: radial-gradient(ellipse 90% 80% at 50% 0%, rgba(94, 196, 245, 0.22), transparent 55%), linear-gradient(180deg, #f8fbff 0%, var(--white) 100%);
-      border-bottom: 1px solid rgba(197, 212, 227, 0.65);
+      border-bottom: 1px solid rgba(143, 161, 179, 0.45);
     }
     .brand-lockup { text-align: center; }
     .brand-lockup .logo-word {
@@ -81,8 +81,8 @@
     }
     .brand-lockup .logo-sub {
       margin-top: 0.35rem;
-      font-size: 0.68rem;
-      font-weight: 600;
+      font-size: 0.75rem;
+      font-weight: 700;
       letter-spacing: 0.15em;
       text-transform: uppercase;
       color: var(--muted);
@@ -108,7 +108,7 @@
     }
     .headline-split .hl-part-b {
       font-size: clamp(1.05rem, 3.8vw, 1.22rem);
-      font-weight: 600;
+      font-weight: 700;
       line-height: 1.65;
       color: var(--navy);
       max-width: 36em;
@@ -128,17 +128,17 @@
       background: var(--white);
       border: 1px solid var(--silver);
       border-radius: 999px;
-      font-size: 0.72rem;
-      font-weight: 600;
+      font-size: 0.8rem;
+      font-weight: 700;
       text-align: center;
       color: var(--navy);
       line-height: 1.5;
       box-shadow: 0 8px 24px -16px rgba(12, 45, 90, 0.2);
     }
-    .trust span { opacity: 0.45; margin-inline: 0.35rem; }
+    .trust span { opacity: 0.65; margin-inline: 0.35rem; }
 
     section { padding: 2.75rem 0; }
-    section + section { border-top: 1px solid rgba(197, 212, 227, 0.55); }
+    section + section { border-top: 1px solid rgba(143, 161, 179, 0.45); }
     .section-title {
       font-size: clamp(1.35rem, 4.5vw, 1.65rem);
       color: var(--navy);
@@ -150,35 +150,36 @@
     /* Ultra Fast Pain Section without heavy external images */
     .pain {
       position: relative;
-      background: linear-gradient(180deg, #0f2744 0%, #0c2d5a 100%);
+      background: linear-gradient(180deg, #0a1f38 0%, #082142 100%);
       border-top: none;
     }
     .pain .wrap { position: relative; z-index: 1; }
-    .pain .section-title { color: #fff; text-shadow: 0 2px 12px rgba(0,0,0,0.35); }
+    .pain .section-title { color: #ffffff; text-shadow: 0 2px 12px rgba(0,0,0,0.35); }
 
     .list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1rem; }
     .list li {
       padding: 1rem 1.1rem;
-      background: rgba(255, 255, 255, 0.96);
+      background: rgba(255, 255, 255, 0.98);
       border-radius: 14px;
-      border: 1px solid rgba(255, 255, 255, 0.5);
-      font-weight: 600;
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      font-weight: 700;
       font-size: 0.98rem;
+      color: var(--text);
       box-shadow: 0 12px 28px -16px rgba(0, 0, 0, 0.35);
     }
 
     .benefits {
-      background: linear-gradient(165deg, var(--navy) 0%, #0f3d72 55%, var(--royal) 100%);
-      color: #fff;
+      background: linear-gradient(165deg, var(--navy) 0%, #0a2d54 55%, var(--royal) 100%);
+      color: #ffffff;
       border-top: none;
       position: relative;
     }
     .benefits .wrap { position: relative; z-index: 1; }
-    .benefits .section-title { color: #fff; }
+    .benefits .section-title { color: #ffffff; }
     .benefits .list li {
-      background: rgba(255, 255, 255, 0.08);
-      border-color: rgba(255, 255, 255, 0.18);
-      color: #f0f7ff;
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.28);
+      color: #ffffff;
       box-shadow: none;
     }
 
@@ -194,30 +195,31 @@
       border-radius: 16px;
       font-family: inherit;
       font-size: 1.05rem;
-      font-weight: 700;
+      font-weight: 800;
       cursor: pointer;
       text-decoration: none;
       text-align: center;
-      color: #fff;
-      background: linear-gradient(180deg, #2a8fe8 0%, var(--blue) 45%, var(--royal) 100%);
-      border-bottom: 4px solid #0a3568;
-      box-shadow: 0 14px 28px -10px rgba(26, 127, 212, 0.65);
+      color: #ffffff;
+      background: linear-gradient(180deg, #1d79cb 0%, var(--blue) 45%, var(--royal) 100%);
+      border-bottom: 4px solid #062142;
+      box-shadow: 0 14px 28px -10px rgba(20, 100, 168, 0.65);
       transition: transform 0.12s ease;
       will-change: transform;
       -webkit-tap-highlight-color: transparent;
     }
-    .cta::after { content: "◀"; font-size: 0.75rem; opacity: 0.85; }
+    .cta::after { content: "◀"; font-size: 0.75rem; opacity: 0.9; }
     .cta:active { transform: translateY(2px); border-bottom-width: 2px; }
     .cta--gold {
-      background: linear-gradient(180deg, #e8cc7a 0%, var(--gold) 50%, #a8843a 100%);
-      color: var(--navy);
-      border-bottom-color: #7a6328;
-      box-shadow: 0 14px 28px -10px rgba(196, 160, 82, 0.55);
+      background: linear-gradient(180deg, #8c6a1e 0%, #735412 100%);
+      color: #ffffff;
+      border-bottom-color: #423007;
+      box-shadow: 0 14px 28px -10px rgba(140, 106, 30, 0.55);
     }
     .cta--green {
-      background: linear-gradient(180deg, #3ddf7a 0%, var(--wa) 45%, #1da851 100%);
-      border-bottom-color: #128c3a;
-      box-shadow: 0 14px 28px -10px rgba(37, 211, 102, 0.55);
+      background: linear-gradient(180deg, #1b8a43 0%, #12632e 100%);
+      color: #ffffff;
+      border-bottom-color: #093b1a;
+      box-shadow: 0 14px 28px -10px rgba(27, 138, 67, 0.55);
     }
     .cta--form { font-size: 1.12rem; padding: 1.15rem; }
 
@@ -227,7 +229,7 @@
       overflow: hidden;
       background: #e5ddd5;
       min-height: 420px;
-      border: 1px solid rgba(0, 0, 0, 0.06);
+      border: 1px solid rgba(0, 0, 0, 0.08);
     }
     .wa-slide {
       position: absolute;
@@ -241,12 +243,12 @@
     }
     .wa-slide.is-active { opacity: 1; position: relative; z-index: 1; }
     .wa-slide img { width: 100%; max-height: 520px; object-fit: contain; border-radius: 12px; }
-    .wa-dots { display: flex; justify-content: center; gap: 0.5rem; margin-top: 1rem; }
+    .wa-dots { display: flex; justify-content: center; gap: 0.65rem; margin-top: 1rem; }
     .wa-dots button {
-      width: 8px; height: 8px; border-radius: 50%; border: none;
+      width: 12px; height: 12px; border-radius: 50%; border: none;
       background: var(--silver); padding: 0; cursor: pointer;
     }
-    .wa-dots button.is-active { background: var(--wa); width: 22px; border-radius: 4px; }
+    .wa-dots button.is-active { background: var(--wa); width: 26px; border-radius: 6px; }
 
     .zigzag-title {
       text-align: center;
@@ -267,18 +269,19 @@
     .zig-row.reverse .zig-text { order: 2; }
     .zig-row.reverse .zig-img { order: 1; }
     .zig-text {
-      font-size: clamp(0.72rem, 3.2vw, 1rem);
-      font-weight: 600;
+      font-size: clamp(0.75rem, 3.2vw, 1rem);
+      font-weight: 700;
       padding: 0.65rem 0.55rem;
       background: var(--ice);
       border-radius: 12px;
-      border-right: 3px solid var(--blue);
+      border-right: 4px solid var(--blue);
       line-height: 1.45;
+      color: var(--navy);
     }
     .zig-img { border-radius: 12px; overflow: hidden; background: var(--ice); }
     .zig-img img { width: 100%; object-fit: contain; aspect-ratio: 1; }
 
-    .ingredients-img { border-radius: var(--radius); overflow: hidden; border: 1px solid rgba(19, 74, 140, 0.1); }
+    .ingredients-img { border-radius: var(--radius); overflow: hidden; border: 1px solid rgba(19, 74, 140, 0.15); }
 
     .steps { counter-reset: step; list-style: none; padding: 0; margin: 0; }
     .steps li {
@@ -286,8 +289,9 @@
       position: relative;
       padding: 0.85rem 1rem 0.85rem 0;
       padding-right: 2.75rem;
-      border-bottom: 1px dashed rgba(197, 212, 227, 0.8);
-      font-weight: 600;
+      border-bottom: 1px dashed rgba(143, 161, 179, 0.8);
+      font-weight: 700;
+      color: var(--navy);
     }
     .steps li:last-child { border-bottom: none; }
     .steps li::before {
@@ -299,9 +303,9 @@
       height: 1.85rem;
       border-radius: 50%;
       background: var(--royal);
-      color: #fff;
+      color: #ffffff;
       font-size: 0.85rem;
-      font-weight: 700;
+      font-weight: 800;
       display: grid;
       place-items: center;
     }
@@ -312,7 +316,7 @@
       border-radius: var(--radius);
       padding: 1.35rem 1.25rem;
     }
-    .guarantee-box p { margin: 0.75rem 0 0; font-size: 0.95rem; color: var(--muted); }
+    .guarantee-box p { margin: 0.75rem 0 0; font-size: 0.95rem; color: var(--muted); font-weight: 600; }
     .trust-row {
       display: flex;
       flex-wrap: wrap;
@@ -320,12 +324,12 @@
       gap: 0.75rem 1.25rem;
       margin-top: 1.25rem;
       font-size: 0.88rem;
-      font-weight: 600;
+      font-weight: 800;
       color: var(--navy);
     }
 
     .offers-block { margin-top: 2rem; padding-top: 0.5rem; }
-    .offer-lead { font-size: 1.05rem; font-weight: 700; color: var(--navy); text-align: center; margin: 0 0 1.35rem; line-height: 1.55; }
+    .offer-lead { font-size: 1.05rem; font-weight: 800; color: var(--navy); text-align: center; margin: 0 0 1.35rem; line-height: 1.55; }
     .offer-cards { display: flex; flex-direction: column; gap: 1rem; }
     .offer-cards a {
       display: block;
@@ -344,7 +348,7 @@
       border: 1px solid var(--silver);
       box-shadow: 0 20px 40px -24px rgba(12, 45, 90, 0.18);
     }
-    .form-card label.field-label { display: block; font-size: 0.85rem; font-weight: 700; margin-bottom: 0.35rem; color: var(--navy); }
+    .form-card label.field-label { display: block; font-size: 0.9rem; font-weight: 800; margin-bottom: 0.35rem; color: var(--navy); }
     .form-card input, .form-card select {
       width: 100%;
       padding: 0.75rem 0.85rem;
@@ -353,7 +357,8 @@
       border-radius: 10px;
       font-family: inherit;
       font-size: 1rem;
-      background: #fff;
+      background: #ffffff;
+      color: var(--text);
     }
 
     .sticky-bar {
@@ -363,7 +368,7 @@
       right: 0;
       z-index: 50;
       padding: 0.65rem 1rem calc(0.65rem + env(safe-area-inset-bottom));
-      background: rgba(252, 253, 255, 0.94);
+      background: rgba(252, 253, 255, 0.96);
       border-top: 1px solid var(--silver);
       transform: translate3d(0, 100%, 0);
       transition: transform 0.25s ease;
@@ -372,7 +377,7 @@
     .sticky-bar.is-visible { transform: translate3d(0, 0, 0); }
     .sticky-bar .cta { margin: 0; font-size: 0.95rem; padding: 0.9rem; }
 
-    footer { text-align: center; padding: 2rem 1rem 5.5rem; font-size: 0.8rem; color: var(--muted); }
+    footer { text-align: center; padding: 2rem 1rem 5.5rem; font-size: 0.85rem; font-weight: 700; color: var(--muted); }
     footer .hoygi-name { font-size: 1.25rem; }
   </style>
 </head>
@@ -393,7 +398,7 @@
         <span class="hl-part-b">اكتشفي <span class="hoygi-name">Hoygi</span> الي اعاد النظارة و الشد لاكثر من 5000 خليجية باقل من شهر</span>
       </h1>
       <div class="hero-img">
-        <img src="hero-before-after.png" alt="Hoygi — قبل وبعد" width="800" height="1000" fetchpriority="high" decoding="async" />
+        <img src="hero-before-after.png" alt="نتائج استخدام سيروم Hoygi قبل وبعد على البشرة" width="800" height="1000" fetchpriority="high" decoding="async" />
       </div>
       <p class="trust">🌿 طبيعي وآمن 100% (GMP) <span>|</span> 🛡️ معتمد ومسجل رسمياً (SFDA) <span>|</span> 🧪 مختبر إكلينيكياً للبشرة</p>
     </div>
@@ -413,7 +418,7 @@
   </section>
 
   <div style="text-align: center; margin: 20px 0;">
-      <img src="beforeafter.jpg" alt="مقارنة البشرة قبل وبعد سيروم هويجي" loading="lazy" width="800" height="600" decoding="async" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" />
+      <img src="beforeafter.jpg" alt="مقارنة بين البشرة قبل وبعد استخدام سيروم هويجي" loading="lazy" width="800" height="600" decoding="async" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" />
   </div>
 
   <section class="benefits">
@@ -434,20 +439,20 @@
       <h2 class="section-title">💬 وهذا بالإثبات.. مو كلام فاضي شوفي آراء عملائنا!</h2>
       <div class="wa-slider" id="waSlider" aria-live="polite">
         <div class="wa-slide is-active" data-index="0">
-          <img src="assetswhatsapp-1.webp" alt="محادثة واتساب 1" loading="lazy" decoding="async" />
+          <img src="assetswhatsapp-1.webp" alt="رأي عميلة عبر محادثة واتساب 1" loading="lazy" decoding="async" />
         </div>
         <div class="wa-slide" data-index="1">
-          <img src="assetswhatsapp-2.webp" alt="محادثة واتساب 2" loading="lazy" decoding="async" />
+          <img src="assetswhatsapp-2.webp" alt="رأي عميلة عبر محادثة واتساب 2" loading="lazy" decoding="async" />
         </div>
         <div class="wa-slide" data-index="2">
-          <img src="assetswhatsapp-3.webp" alt="محادثة واتساب 3" loading="lazy" decoding="async" />
+          <img src="assetswhatsapp-3.webp" alt="رأي عميلة عبر محادثة واتساب 3" loading="lazy" decoding="async" />
         </div>
         <div class="wa-slide" data-index="3">
-          <img src="assetswhatsapp-4.webp" alt="محادثة واتساب 4" loading="lazy" decoding="async" />
+          <img src="assetswhatsapp-4.webp" alt="رأي عميلة عبر محادثة واتساب 4" loading="lazy" decoding="async" />
         </div>
       </div>
       <div class="wa-dots" id="waDots"></div>
-      <a class="cta" href="#order">أبي بشرة أحلامي مثل هالبنات</a>
+      <a class="cta" href="#order" aria-label="الانتقال لطلب المنتج للوصول لبشرة أحلامك">أبي بشرة أحلامي مثل هالبنات</a>
     </div>
   </section>
 
@@ -457,19 +462,19 @@
 
       <div class="zig-row">
         <div class="zig-text">🌿 خالي من المواد الكيميائية اللي تسبب تحسس، ومناسب لكل أنواع البشرة.</div>
-        <div class="zig-img"><img src="assetsproduct-bottle.webp" alt="" width="600" height="600" loading="lazy" decoding="async" /></div>
+        <div class="zig-img"><img src="assetsproduct-bottle.webp" alt="عبوة سيروم هويجي المائية" width="600" height="600" loading="lazy" decoding="async" /></div>
       </div>
       <div class="zig-row reverse">
         <div class="zig-text">💧 قوامه خفيف تمتصه البشرة بسرعة وما يسويلك أي طبقة فوق الجلد.</div>
-        <div class="zig-img"><img src="assetsproduct-bottle2.webp" alt="" width="600" height="600" loading="lazy" decoding="async" /></div>
+        <div class="zig-img"><img src="assetsproduct-bottle2.webp" alt="قوام سيروم هويجي الخفيف" width="600" height="600" loading="lazy" decoding="async" /></div>
       </div>
       <div class="zig-row">
         <div class="zig-text">✨ يخلي البشرة رطبة طول اليوم ويمدها بالمغذيات الضرورية.</div>
-        <div class="zig-img"><img src="assetsproduct-bottle3.webp" alt="" width="600" height="600" loading="lazy" decoding="async" /></div>
+        <div class="zig-img"><img src="assetsproduct-bottle3.webp" alt="تأثير ترطيب سيروم هويجي" width="600" height="600" loading="lazy" decoding="async" /></div>
       </div>
       <div class="zig-row reverse">
         <div class="zig-text">🍃 يعطي البشرة إحساس بالانتعاش بدون ما يسبب تعرق أو أثر دهني.</div>
-        <div class="zig-img"><img src="assetsproduct-bottle4.webp" alt="" width="600" height="600" loading="lazy" decoding="async" /></div>
+        <div class="zig-img"><img src="assetsproduct-bottle4.webp" alt="انتعاش البشرة بعد سيروم هويجي" width="600" height="600" loading="lazy" decoding="async" /></div>
       </div>
     </div>
   </section>
@@ -477,15 +482,15 @@
   <section class="ingredients">
     <div class="wrap">
       <div class="ingredients-img">
-        <img src="ingredients.png" alt="مكونات Hoygi" width="1200" height="800" loading="lazy" decoding="async" />
+        <img src="ingredients.png" alt="تفاصيل مكونات سيروم هويجي الفعالة" width="1200" height="800" loading="lazy" decoding="async" />
       </div>
-      <a class="cta cta--gold" href="#order">ابي نتيجة البوتوكس و ابر النظارة بدون اعراض جانبية</a>
+      <a class="cta cta--gold" href="#order" aria-label="الانتقال لنموذج الطلب للحصول على نتيجة البوتوكس">ابي نتيجة البوتوكس و ابر النظارة بدون اعراض جانبية</a>
     </div>
   </section>
 
   <section class="usage">
     <div class="wrap">
-      <p class="section-title" style="font-size:1.05rem;font-weight:700;">للحصول على أفضل نتيجة ممكنة وتأثير مضاعف يشبه إبر النظارة و البوتوكس:</p>
+      <p class="section-title" style="font-size:1.05rem;font-weight:800;">للحصول على أفضل نتيجة ممكنة وتأثير مضاعف يشبه إبر النظارة و البوتوكس:</p>
       <ol class="steps">
         <li>ابدئي بغسل وجهك بالغسول المفضل لديك وتنشيفه برفق</li>
         <li>استخدميه صباحا و مساء لنتيجة اسرع</li>
@@ -509,9 +514,9 @@
       <div class="offers-block">
         <p class="offer-lead">استمرارك في الروتين هو سر البشرة الشابة.. عشان هيك جهزنالك عرض لتوفّري أكثر وتحصلي على نتائج مضاعفة</p>
         <div class="offer-cards">
-          <a href="#order" class="offer-link" data-offer="199"><img src="offer-3.png" alt="3 سيرومات ب 199 ريال" loading="lazy" decoding="async" /></a>
-          <a href="#order" class="offer-link" data-offer="259"><img src="offer-4.png" alt="4 سيرومات ب 259 ريال" loading="lazy" decoding="async" /></a>
-          <a href="#order" class="offer-link" data-offer="299"><img src="offer-5.png" alt="5 سيرومات ب 299 ريال" loading="lazy" decoding="async" /></a>
+          <a href="#order" class="offer-link" data-offer="199" aria-label="اختيار عرض 3 سيرومات بـ 199 ريال"><img src="offer-3.png" alt="عرض 3 سيرومات بـ 199 ريال" loading="lazy" decoding="async" /></a>
+          <a href="#order" class="offer-link" data-offer="259" aria-label="اختيار عرض 4 سيرومات بـ 259 ريال"><img src="offer-4.png" alt="عرض 4 سيرومات بـ 259 ريال" loading="lazy" decoding="async" /></a>
+          <a href="#order" class="offer-link" data-offer="299" aria-label="اختيار عرض 5 سيرومات بـ 299 ريال"><img src="offer-5.png" alt="عرض 5 سيرومات بـ 299 ريال" loading="lazy" decoding="async" /></a>
         </div>
       </div>
     </div>
@@ -521,20 +526,20 @@
     <div class="wrap">
       <form class="form-card" id="orderForm" onsubmit="sendOrder(event)">
         <label class="field-label" for="offer">اختيار العرض المناسب</label>
-        <select id="offer" name="offer" required>
-          <option value="">—</option>
+        <select id="offer" name="offer" required aria-required="true">
+          <option value="">— حددي العرض المناسب —</option>
           <option value="199">3 سيرومات ب 199 ريال</option>
           <option value="259">4 سيرومات ب 259 ريال</option>
           <option value="299">5 سيرومات ب 299 ريال</option>
         </select>
 
         <label class="field-label" for="name">الاسم</label>
-        <input id="name" name="name" type="text" required autocomplete="name" placeholder="الاسم الكامل" />
+        <input id="name" name="name" type="text" required aria-required="true" autocomplete="name" placeholder="الاسم الكامل" />
 
         <label class="field-label" for="phone">الجوال</label>
-        <input id="phone" name="phone" type="tel" required inputmode="tel" autocomplete="tel" placeholder="رقم الجوال" />
+        <input id="phone" name="phone" type="tel" required aria-required="true" inputmode="tel" autocomplete="tel" placeholder="رقم الجوال" />
 
-        <button type="submit" id="submitBtn" class="cta cta--form">اضغط هنا لاتمام الطلب</button>
+        <button type="submit" id="submitBtn" class="cta cta--form" aria-label="إرسال الطلب وإتمامه">اضغط هنا لاتمام الطلب</button>
       </form>
     </div>
   </section>
@@ -544,7 +549,7 @@
   </footer>
 
   <div class="sticky-bar" id="stickyBar">
-    <a class="cta cta--green" href="#order">الحقي العرض صالح اليوم فقط</a>
+    <a class="cta cta--green" href="#order" aria-label="الانتقال لطلب العرض الحالي المتاح اليوم فقط">الحقي العرض صالح اليوم فقط</a>
   </div>
 
   <script>
@@ -557,6 +562,7 @@
         slides.forEach(function (_, idx) {
           var b = document.createElement("button");
           b.type = "button";
+          b.setAttribute("aria-label", "عرض المحادثة رقم " + (idx + 1));
           if (idx === 0) b.className = "is-active";
           b.addEventListener("click", function () { go(idx); resetTimer(); });
           dotsEl.appendChild(b);
@@ -598,7 +604,7 @@
       }
     })();
 
-    /* ━━━ Ultra-Fast Send Order Function (Google Sheets + Pixels) ━━━ */
+    /* ━━━ Ultra-Fast Send Order Function ━━━ */
     function sendOrder(event) {
       if (event) event.preventDefault();
 
