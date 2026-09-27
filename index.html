@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0c4a8a" />
+  <title>Hoygi — Blue Copper Peptide Essence</title>
+  <meta name="description" content="سيروم Hoygi Blue Copper Peptide — النظارة والشد لأكثر من 5000 خليجية. الدفع عند الاستلام." />
+  <link rel="preload" as="image" href="assets/hero-before-after.png" fetchpriority="high" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #0c2d5a;
+      --royal: #134a8c;
+      --blue: #1a7fd4;
+      --cyan: #5ec4f5;
+      --ice: #eef6fc;
+      --white: #fcfdff;
+      --silver: #c5d4e3;
+      --gold: #c4a052;
+      --text: #1a2f45;
+      --muted: #4a6278;
+      --wa: #25d366;
+      --radius: 18px;
+      --max: 680px;
+      --font: "IBM Plex Sans Arabic", system-ui, sans-serif;
+      --display: "Cormorant Garamond", "IBM Plex Sans Arabic", serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      font-family: var(--font);
+      font-size: 17px;
+      line-height: 1.65;
+      color: var(--text);
+      background: var(--white);
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; }
+    .wrap { width: min(100% - 2rem, var(--max)); margin-inline: auto; }
+
+    .hoygi-name {
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 1.12em;
+      letter-spacing: 0.08em;
+      color: var(--blue);
+      text-transform: uppercase;
+      display: inline-block;
+      padding-inline: 0.15em;
+      text-shadow: 0 1px 0 rgba(255,255,255,0.4);
+    }
+    .benefits .hoygi-name,
+    .pain .hoygi-name { color: var(--cyan); text-shadow: none; }
+
+    .prehead {
+      background: linear-gradient(90deg, var(--navy), var(--royal));
+      color: #fff;
+      text-align: center;
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 0.55rem 1rem;
+    }
+
+    /* Brand masthead */
+    .brand-masthead {
+      margin: 0;
+      padding: 1.35rem 1rem 1.1rem;
+      background:
+        radial-gradient(ellipse 90% 80% at 50% 0%, rgba(94, 196, 245, 0.22), transparent 55%),
+        linear-gradient(180deg, #f8fbff 0%, var(--white) 100%);
+      border-bottom: 1px solid rgba(197, 212, 227, 0.65);
+    }
+    .brand-masthead-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      max-width: var(--max);
+      margin-inline: auto;
+    }
+    .guarantee-seal {
+      flex-shrink: 0;
+      width: 4.5rem;
+      height: 4.5rem;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      font-size: 0.55rem;
+      font-weight: 800;
+      line-height: 1.25;
+      color: var(--navy);
+      background: linear-gradient(145deg, #fff9e8, #e8d5a0);
+      border: 2px solid var(--gold);
+      box-shadow: 0 8px 24px -8px rgba(196, 160, 82, 0.55), inset 0 1px 0 rgba(255,255,255,0.9);
+    }
+    .guarantee-seal span { display: block; font-size: 1.35rem; line-height: 1; margin-bottom: 0.15rem; }
+    .brand-lockup { text-align: center; }
+    .brand-lockup .logo-word {
+      font-family: var(--display);
+      font-size: clamp(2.4rem, 9vw, 3rem);
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      color: var(--royal);
+      line-height: 1;
+      display: block;
+    }
+    .brand-lockup .logo-sub {
+      margin-top: 0.35rem;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .hero {
+      padding: 1.5rem 0 0;
+      background: linear-gradient(180deg, var(--white) 0%, var(--ice) 38%, var(--white) 100%);
+    }
+    .headline-split {
+      text-align: center;
+      margin: 0 0 1.25rem;
+      padding: 0 0.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+    .headline-split .hl-part-a {
+      font-family: var(--display);
+      font-size: clamp(1.35rem, 4.8vw, 1.75rem);
+      font-weight: 700;
+      line-height: 1.45;
+      color: #8b2942;
+    }
+    .headline-split .hl-part-b {
+      font-size: clamp(1.05rem, 3.8vw, 1.22rem);
+      font-weight: 600;
+      line-height: 1.65;
+      color: var(--navy);
+      max-width: 36em;
+      margin-inline: auto;
+    }
+    .hero-img {
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid rgba(19, 74, 140, 0.12);
+      box-shadow: 0 24px 48px -28px rgba(12, 45, 90, 0.35);
+    }
+    .hero-img img { width: 100%; aspect-ratio: 4/5; object-fit: cover; }
+
+    .trust {
+      margin: 1.25rem 0 0;
+      padding: 0.85rem 1rem;
+      background: var(--white);
+      border: 1px solid var(--silver);
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-align: center;
+      color: var(--navy);
+      line-height: 1.5;
+      box-shadow: 0 8px 24px -16px rgba(12, 45, 90, 0.2);
+    }
+    .trust span { opacity: 0.45; margin-inline: 0.35rem; }
+
+    section { padding: 2.75rem 0; }
+    section + section { border-top: 1px solid rgba(197, 212, 227, 0.55); }
+    .section-title {
+      font-family: var(--display);
+      font-size: clamp(1.35rem, 4.5vw, 1.65rem);
+      color: var(--navy);
+      margin: 0 0 1.25rem;
+      line-height: 1.4;
+      font-weight: 700;
+    }
+
+    .pain {
+      position: relative;
+      background: url("https://images.unsplash.com/photo-1524502397800-2ff866a74377?q=70&w=1200&auto=format&fit=crop") center / cover no-repeat;
+      border-top: none;
+    }
+    .pain::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(12, 29, 48, 0.88), rgba(12, 45, 90, 0.78));
+    }
+    .pain .wrap { position: relative; z-index: 1; }
+    .pain .section-title { color: #fff; text-shadow: 0 2px 12px rgba(0,0,0,0.35); }
+
+    .list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1rem; }
+    .list li {
+      padding: 1rem 1.1rem;
+      background: rgba(255, 255, 255, 0.96);
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      font-weight: 500;
+      font-size: 0.98rem;
+      box-shadow: 0 12px 28px -16px rgba(0, 0, 0, 0.35);
+    }
+
+    .benefits {
+      background: linear-gradient(165deg, var(--navy) 0%, #0f3d72 55%, var(--royal) 100%);
+      color: #fff;
+      border-top: none;
+      position: relative;
+    }
+    .benefits::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(94, 196, 245, 0.15), transparent 60%);
+      pointer-events: none;
+    }
+    .benefits .wrap { position: relative; z-index: 1; }
+    .benefits .section-title { color: #fff; }
+    .benefits .list li {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.18);
+      color: #f0f7ff;
+      backdrop-filter: blur(6px);
+      box-shadow: none;
+    }
+
+    .cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      width: 100%;
+      padding: 1.05rem 1.35rem;
+      margin: 1.75rem 0 0;
+      border: none;
+      border-radius: 16px;
+      font-family: inherit;
+      font-size: 1.05rem;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      text-align: center;
+      color: #fff;
+      background: linear-gradient(180deg, #2a8fe8 0%, var(--blue) 45%, var(--royal) 100%);
+      border-bottom: 4px solid #0a3568;
+      box-shadow: 0 14px 28px -10px rgba(26, 127, 212, 0.65), inset 0 1px 0 rgba(255,255,255,0.25);
+      transition: transform 0.12s ease, box-shadow 0.12s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .cta::after {
+      content: "◀";
+      font-size: 0.75rem;
+      opacity: 0.85;
+    }
+    .cta:hover { box-shadow: 0 18px 32px -10px rgba(26, 127, 212, 0.75), inset 0 1px 0 rgba(255,255,255,0.3); }
+    .cta:active { transform: translateY(2px); border-bottom-width: 2px; }
+    .cta--gold {
+      background: linear-gradient(180deg, #e8cc7a 0%, var(--gold) 50%, #a8843a 100%);
+      color: var(--navy);
+      border-bottom-color: #7a6328;
+      box-shadow: 0 14px 28px -10px rgba(196, 160, 82, 0.55), inset 0 1px 0 rgba(255,255,255,0.35);
+    }
+    .cta--green {
+      background: linear-gradient(180deg, #3ddf7a 0%, var(--wa) 45%, #1da851 100%);
+      border-bottom-color: #128c3a;
+      box-shadow: 0 14px 28px -10px rgba(37, 211, 102, 0.55), inset 0 1px 0 rgba(255,255,255,0.3);
+    }
+    .cta--form {
+      font-size: 1.12rem;
+      padding: 1.15rem;
+      animation: ctaPulse 2.5s ease-in-out infinite;
+    }
+    @keyframes ctaPulse {
+      0%, 100% { box-shadow: 0 14px 28px -10px rgba(26, 127, 212, 0.65), inset 0 1px 0 rgba(255,255,255,0.25); }
+      50% { box-shadow: 0 18px 36px -8px rgba(26, 127, 212, 0.85), 0 0 0 4px rgba(26, 127, 212, 0.15); }
+    }
+
+    .wa-slider {
+      position: relative;
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: #e5ddd5;
+      min-height: 420px;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+    }
+    .wa-slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 0.6s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.5rem;
+    }
+    .wa-slide.is-active { opacity: 1; position: relative; z-index: 1; }
+    .wa-slide img { width: 100%; max-height: 520px; object-fit: contain; border-radius: 12px; }
+    .wa-placeholder { text-align: center; padding: 2rem; color: #54656f; font-size: 0.9rem; }
+    .wa-dots { display: flex; justify-content: center; gap: 0.5rem; margin-top: 1rem; }
+    .wa-dots button {
+      width: 8px; height: 8px; border-radius: 50%; border: none;
+      background: var(--silver); padding: 0; cursor: pointer;
+    }
+    .wa-dots button.is-active { background: var(--wa); width: 22px; border-radius: 4px; }
+
+    .zigzag-title {
+      text-align: center;
+      font-family: var(--display);
+      font-size: clamp(1.25rem, 4vw, 1.5rem);
+      color: var(--navy);
+      margin: 0 0 2rem;
+      line-height: 1.45;
+      font-weight: 700;
+    }
+    .zig-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.55rem;
+      align-items: center;
+      margin-bottom: 1.25rem;
+    }
+    .zig-row:last-child { margin-bottom: 0; }
+    .zig-row.reverse .zig-text { order: 2; }
+    .zig-row.reverse .zig-img { order: 1; }
+    .zig-text {
+      font-size: clamp(0.72rem, 3.2vw, 1rem);
+      font-weight: 600;
+      padding: 0.65rem 0.55rem;
+      background: var(--ice);
+      border-radius: 12px;
+      border-right: 3px solid var(--blue);
+      line-height: 1.45;
+    }
+    .zig-img {
+      border-radius: 12px;
+      overflow: hidden;
+      background: var(--ice);
+    }
+    .zig-img img { width: 100%; object-fit: contain; aspect-ratio: 1; }
+
+    .ingredients-img {
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid rgba(19, 74, 140, 0.1);
+    }
+
+    .steps { counter-reset: step; list-style: none; padding: 0; margin: 0; }
+    .steps li {
+      counter-increment: step;
+      position: relative;
+      padding: 0.85rem 1rem 0.85rem 0;
+      padding-right: 2.75rem;
+      border-bottom: 1px dashed rgba(197, 212, 227, 0.8);
+      font-weight: 500;
+    }
+    .steps li:last-child { border-bottom: none; }
+    .steps li::before {
+      content: counter(step);
+      position: absolute;
+      right: 0;
+      top: 0.75rem;
+      width: 1.85rem;
+      height: 1.85rem;
+      border-radius: 50%;
+      background: var(--royal);
+      color: #fff;
+      font-size: 0.85rem;
+      font-weight: 700;
+      display: grid;
+      place-items: center;
+    }
+
+    .guarantee-box {
+      background: linear-gradient(180deg, var(--ice), var(--white));
+      border: 1px solid var(--silver);
+      border-radius: var(--radius);
+      padding: 1.35rem 1.25rem;
+    }
+    .guarantee-box p { margin: 0.75rem 0 0; font-size: 0.95rem; color: var(--muted); }
+    .trust-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem 1.25rem;
+      margin-top: 1.25rem;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--navy);
+    }
+
+    .offers-block {
+      margin-top: 2rem;
+      padding-top: 0.5rem;
+    }
+    .offer-lead {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--navy);
+      text-align: center;
+      margin: 0 0 1.35rem;
+      line-height: 1.55;
+    }
+    .offer-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .offer-cards a {
+      display: block;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 2px solid transparent;
+      box-shadow: 0 16px 36px -20px rgba(12, 45, 90, 0.35);
+      transition: transform 0.15s ease, border-color 0.15s ease;
+    }
+    .offer-cards a:active { transform: scale(0.98); }
+    .offer-cards a:focus-visible {
+      outline: 3px solid var(--blue);
+      border-color: var(--gold);
+    }
+
+    .form-section { background: var(--ice); }
+    .form-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 1.35rem 1.25rem;
+      border: 1px solid var(--silver);
+      box-shadow: 0 20px 40px -24px rgba(12, 45, 90, 0.18);
+    }
+    .form-card label.field-label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+      color: var(--navy);
+    }
+    .form-card input,
+    .form-card select {
+      width: 100%;
+      padding: 0.75rem 0.85rem;
+      margin-bottom: 1rem;
+      border: 1px solid var(--silver);
+      border-radius: 10px;
+      font-family: inherit;
+      font-size: 1rem;
+      background: #fff;
+    }
+    .form-card input:focus,
+    .form-card select:focus {
+      outline: 2px solid rgba(26, 127, 212, 0.35);
+      border-color: var(--blue);
+    }
+
+    .sticky-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 50;
+      padding: 0.65rem 1rem calc(0.65rem + env(safe-area-inset-bottom));
+      background: rgba(252, 253, 255, 0.94);
+      backdrop-filter: blur(10px);
+      border-top: 1px solid var(--silver);
+      transform: translateY(100%);
+      transition: transform 0.25s ease;
+    }
+    .sticky-bar.is-visible { transform: translateY(0); }
+    .sticky-bar .cta { margin: 0; font-size: 0.95rem; padding: 0.9rem; }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem 5.5rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    footer .hoygi-name { font-size: 1.25rem; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .wa-slide { transition: none; }
+      .cta--form { animation: none; }
+    }
+  </style>
+</head>
+<body>
+  <p class="prehead">لكل بنت دور على النظارة و الامتلاء الطبيعي .. الحقي العرض لليوم فقط</p>
+
+  <header class="brand-masthead">
+    <div class="brand-masthead-inner">
+      <div class="guarantee-seal" aria-hidden="true">
+        <span>🛡️</span>
+        ضمان<br />الاسترداد
+      </div>
+      <div class="brand-lockup">
+        <span class="logo-word hoygi-name" style="text-transform:uppercase;color:var(--royal);">Hoygi</span>
+        <span class="logo-sub">Blue Copper Peptide Essence</span>
+      </div>
+      <div class="guarantee-seal" aria-hidden="true">
+        <span>✓</span>
+        SFDA<br />معتمد
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap">
+      <h1 class="headline-split">
+        <span class="hl-part-a">لا تفقدي الامل في بشرتك و لا تفكري فالابر..</span>
+        <span class="hl-part-b">اكتشفي <span class="hoygi-name">Hoygi</span> الي اعاد النظارة و الشد لاكثر من 5000 خليجية باقل من شهر</span>
+      </h1>
+      <div class="hero-img">
+        <img src="assets/hero-before-after.png" alt="Hoygi — قبل وبعد" width="800" height="1000" fetchpriority="high" decoding="async" />
+      </div>
+      <p class="trust">🌿 طبيعي وآمن 100% (GMP) <span>|</span> 🛡️ معتمد ومسجل رسمياً (SFDA) <span>|</span> 🧪 مختبر إكلينيكياً للبشرة</p>
+    </div>
+  </section>
+
+  <section class="pain">
+    <div class="wrap">
+      <h2 class="section-title">أنا يفهم زين الانهيار اللي تسببه مشاكل البشرة.. وما تلاقيلها حل!</h2>
+      <ul class="list">
+        <li>💸 قطيتِ كل فلوسج على الكريمات والمنتجات، والمشاكل ما راحت بالعكس زادت!</li>
+        <li>🤐 ما تضحكين ولا تعبرين براحتج؛ عشان الخطوط التعبيرية واضحة وتبينج أكبر من رفيجاتج!</li>
+        <li>🐼 الهالات وانتفاخ تحت العين تخفي جمالج وتخليج تعبانة طول اليوم!</li>
+        <li>👀 البقع وآثار الحبوب تخلي البنات يسألونج عنها باستفزاز!"شفيه وجهكِ صاير جذي؟"</li>
+        <li>🧱 تبين تخفين هالمشاكل بالكونسيلر والفونديشن، بس يكتل ويفضحها أكثر!</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="benefits">
+    <div class="wrap">
+      <h2 class="section-title">لا تقلقين المشكل مو فيك أبد.. ومو بنفسج اللي تعاني!<br /> بس جاوبيني قبل، هل فعلاً تبين..</h2>
+      <ul class="list">
+        <li>👑 "تصيرين تبين أصغر وأجمل من رfيجاتج، والكل ينصدم لما يسمع عمرج كم!"</li>
+        <li>✨ "تكونين نجمة العزايم والطلعات، والكل يلتفت لبشرتج."</li>
+        <li>روتين خفيف و المكياج يبقى املس طول اليوم وما يكتل</li>
+        <li>💅 "تخلي اللي كانوا يعيبون على بشرتج يرجعون اليوم يطلبون منج السر."</li>
+        <li>💎 "بشرة مشدودة ونضرة تخلي الكل يتهامس عليج ويفكرونج حاقنة إبر!"</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="social">
+    <div class="wrap">
+      <h2 class="section-title">💬 وهذا بالإثبات.. مو كلام فاضي شوفي آراء عملائنا!</h2>
+      <div class="wa-slider" id="waSlider" aria-live="polite">
+        <div class="wa-slide is-active" data-index="0">
+          <img src="assets/whatsapp-1.png" alt="محادثة واتساب 1" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('p'),{className:'wa-placeholder',textContent:'ضعي صورة المحادثة في assets/whatsapp-1.png'}))" />
+        </div>
+        <div class="wa-slide" data-index="1">
+          <img src="assets/whatsapp-2.png" alt="محادثة واتساب 2" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('p'),{className:'wa-placeholder',textContent:'ضعي صورة المحادثة في assets/whatsapp-2.png'}))" />
+        </div>
+        <div class="wa-slide" data-index="2">
+          <img src="assets/whatsapp-3.png" alt="محادثة واتساب 3" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('p'),{className:'wa-placeholder',textContent:'ضعي صورة المحادثة في assets/whatsapp-3.png'}))" />
+        </div>
+        <div class="wa-slide" data-index="3">
+          <img src="assets/whatsapp-4.png" alt="محادثة واتساب 4" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('p'),{className:'wa-placeholder',textContent:'ضعي صورة المحادثة في assets/whatsapp-4.png'}))" />
+        </div>
+      </div>
+      <div class="wa-dots" id="waDots" aria-hidden="true"></div>
+      <a class="cta" href="#order">أبي بشرة أحلامي مثل هالبنات</a>
+    </div>
+  </section>
+
+  <section class="diff">
+    <div class="wrap">
+      <h2 class="zigzag-title">مو كل سيروم يعطيك النتيجة.. هذا ليش سيروم <span class="hoygi-name">Hoygi</span> غيّر قواعد اللعبة</h2>
+
+      <div class="zig-row">
+        <div class="zig-text">🌿 خالي من المواد الكيميائية اللي تسبب تحسس، ومناسب لكل أنواع البشرة.</div>
+        <div class="zig-img"><img src="assets/product-bottle.png" alt="" width="600" height="600" loading="lazy" decoding="async" /></div>
+      </div>
+      <div class="zig-row reverse">
+        <div class="zig-text">💧 قوامه خفيف تمتصه البشرة بسرعة وما يسويلك أي طبقة فوق الجلد.</div>
+        <div class="zig-img"><img src="assets/product-bottle.png" alt="" width="600" height="600" loading="lazy" decoding="async" /></div>
+      </div>
+      <div class="zig-row">
+        <div class="zig-text">✨ يخلي البشرة رطبة طول اليوم ويمدها بالمغذيات الضرورية.</div>
+        <div class="zig-img"><img src="assets/product-bottle.png" alt="" width="600" height="600" loading="lazy" decoding="async" /></div>
+      </div>
+      <div class="zig-row reverse">
+        <div class="zig-text">🍃 يعطي البشرة إحساس بالانتعاش بدون ما يسبب تعرق أو أثر دهني.</div>
+        <div class="zig-img"><img src="assets/product-bottle.png" alt="" width="600" height="600" loading="lazy" decoding="async" /></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ingredients">
+    <div class="wrap">
+      <div class="ingredients-img">
+        <img src="assets/ingredients.png" alt="مكونات Hoygi" width="1200" height="800" loading="lazy" decoding="async" />
+      </div>
+      <a class="cta cta--gold" href="#order">ابي نتيجة البوتوكس و ابر النظارة بدون اعراض جانبية</a>
+    </div>
+  </section>
+
+  <section class="usage">
+    <div class="wrap">
+      <p class="section-title" style="font-size:1.05rem;font-family:var(--font);font-weight:700;">للحصول على أفضل نتيجة ممكنة وتأثير مضاعف يشبه إبر النظارة و البوتوكس:</p>
+      <ol class="steps">
+        <li>ابدئي بغسل وجهك بالغسول المفضل لديك وتنشيفه برfق</li>
+        <li>استخدميه صباحا و مساء لنتيجة اسرع</li>
+        <li>ولا تنسي تطبيق واقي الشمس في الفترة الصباحية.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="guarantee">
+    <div class="wrap">
+      <div class="guarantee-box">
+        <h2 class="section-title" style="margin-bottom:0.5rem;">ضمان الذهبي للاسترداد بدون شروط معقدة:</h2>
+        <p>نحن نثق تماماً في جودة وفعالية سيروم البيبتيدات  ونتايجه المذهلة على كل ن جربه . فإذا لم تلاحظي الفرق الواضح في صfاء بشرتك ونضارتها خلال شهر، أو إذا لم يكن المنتج مطابقاً لما وعدناك به..  من حقك استرداد أموالك كاملة دون أي نقاش.</p>
+        <div class="trust-row">
+          <span>🛡️ منتج أصلي ومضمون 100%</span>
+          <span>💵 الدفع عند الاستلام</span>
+          <span>📞 دعم فني متاح طول فترة الاستخدام</span>
+        </div>
+      </div>
+
+      <div class="offers-block">
+        <p class="offer-lead">استمرارك في الروتين هو سر البشرة الشابة.. عشان هيك جهزنالك عرض لتوفّري أكثر وتحصلي على نتائج مضاعفة</p>
+        <div class="offer-cards">
+          <a href="#order" class="offer-link" data-offer="199"><img src="assets/offer-3.png" alt="3 سيرومات ب 199 ريال" loading="lazy" decoding="async" /></a>
+          <a href="#order" class="offer-link" data-offer="259"><img src="assets/offer-4.png" alt="4 سيرومات ب 259 ريال" loading="lazy" decoding="async" /></a>
+          <a href="#order" class="offer-link" data-offer="299"><img src="assets/offer-5.png" alt="5 سيرومات ب 299 ريال" loading="lazy" decoding="async" /></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="form-section" id="order">
+    <div class="wrap">
+      <form class="form-card" id="orderForm" action="thank-you.html" method="get">
+        <label class="field-label" for="offer">اختيار العرض المناسب</label>
+        <select id="offer" name="offer" required>
+          <option value="">—</option>
+          <option value="199">3 سيرومات ب  ريال199</option>
+          <option value="259">4 سيرومات ب 259 ريال</option>
+          <option value="299">5سيرومات ب 299 ريال</option>
+        </select>
+        <label class="field-label" for="name">الاسم</label>
+        <input id="name" name="name" type="text" required autocomplete="name" />
+        <label class="field-label" for="phone">الجوال</label>
+        <input id="phone" name="phone" type="tel" required inputmode="tel" autocomplete="tel" />
+        <button type="submit" class="cta cta--form">اضغط هنا لاتمام الطلب</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <span class="hoygi-name">Hoygi</span> · Blue Copper Peptide Essence
+  </footer>
+
+  <div class="sticky-bar" id="stickyBar">
+    <a class="cta cta--green" href="#order">الحقي العرض صالح اليوم فقط</a>
+  </div>
+
+  <script>
+    (function () {
+      var slides = document.querySelectorAll(".wa-slide");
+      var dotsEl = document.getElementById("waDots");
+      var i = 0;
+      if (slides.length && dotsEl) {
+        slides.forEach(function (_, idx) {
+          var b = document.createElement("button");
+          b.type = "button";
+          if (idx === 0) b.className = "is-active";
+          b.addEventListener("click", function () { go(idx); resetTimer(); });
+          dotsEl.appendChild(b);
+        });
+        function go(n) {
+          slides[i].classList.remove("is-active");
+          i = n % slides.length;
+          slides[i].classList.add("is-active");
+          dotsEl.querySelectorAll("button").forEach(function (d, j) {
+            d.classList.toggle("is-active", j === i);
+          });
+        }
+        var timer;
+        function resetTimer() {
+          clearInterval(timer);
+          timer = setInterval(function () { go(i + 1); }, 10000);
+        }
+        resetTimer();
+      }
+
+      var offerSelect = document.getElementById("offer");
+      document.querySelectorAll(".offer-link").forEach(function (link) {
+        link.addEventListener("click", function () {
+          var v = link.getAttribute("data-offer");
+          if (offerSelect && v) offerSelect.value = v;
+        });
+      });
+
+      var bar = document.getElementById("stickyBar");
+      var hero = document.querySelector(".hero");
+      if (bar && hero && "IntersectionObserver" in window) {
+        new IntersectionObserver(function (entries) {
+          bar.classList.toggle("is-visible", !entries[0].isIntersecting);
+        }, { threshold: 0 }).observe(hero);
+      } else if (bar) {
+        bar.classList.add("is-visible");
+      }
+    })();
+  </script>
+</body>
+</html>
