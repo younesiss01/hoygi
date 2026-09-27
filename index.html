@@ -705,22 +705,6 @@
         bar.classList.add("is-visible");
       }
     })();
- function sendOrder(event) {
-      event.preventDefault();
-      var name    = document.getElementById('nameInput').value.trim();
-      var phone   = document.getElementById('phoneInput').value.trim();
-      var addressEl = document.getElementById('addressInput');
-      var address = addressEl ? addressEl.value.trim() : '';
-      var pkg     = document.getElementById('packageInput').value;
-      var btn     = document.getElementById('submitBtn');
-      var scriptURL = 'https://script.google.com/macros/s/AKfycbxeg5xp7ZRXC-r-L5NrTDicOgXJiwNoZ4J70IH3V8XPiCAKwhvjmd-lQQIvTOMYR64/exec';
-
-      if (!name || !phone) { alert('يرجى ملء البيانات (الاسم ورقم الهاتف)'); return; }
-      if (btn) { btn.innerText = 'جاري التأكيد...'; btn.disabled = true; }
-
-      var quantity = '3', price = '199', notes = 'ثلاث سيرومات ب 199 ريال';
-      if (pkg.includes('259') || pkg.includes('4 سيرومات')) { quantity = '4'; price = '259'; notes = 'اربع سيرومات ب 259 ريال'; }
-      else if (pkg.includes('299') || pkg.includes('5'))  { quantity = '5'; price = '299'; notes = '5 سيرومات ب 299 ريال'; }
   </script>
 </body>
 </html>
