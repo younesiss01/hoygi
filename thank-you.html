@@ -1,20 +1,196 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>تم استلام طلبك — Hoygi</title>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@500;700&display=swap" rel="stylesheet" />
-  <style>
-    body { font-family: "IBM Plex Sans Arabic", system-ui, sans-serif; margin: 0; min-height: 100vh; display: grid; place-items: center; background: #eef6fc; color: #0c2d5a; text-align: center; padding: 2rem; }
-    a { color: #1a7fd4; font-weight: 700; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تم تأكيد طلبك بنجاح - سيروم هويجي</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #0c2d5a;
+            --royal: #134a8c;
+            --blue: #1a7fd4;
+            --cyan: #5ec4f5;
+            --ice: #eef6fc;
+            --white: #fcfdff;
+            --silver: #c5d4e3;
+            --gold: #c4a052;
+            --text: #1a2f45;
+            --muted: #4a6278;
+            --radius: 18px;
+            --max: 680px;
+            --font: "IBM Plex Sans Arabic", system-ui, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: var(--font);
+        }
+
+        body {
+            background-color: var(--ice);
+            color: var(--text);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 16px;
+        }
+
+        .thank-you-container {
+            width: 100%;
+            max-width: var(--max);
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: 0 10px 30px rgba(12, 45, 90, 0.08);
+            padding: 32px 24px;
+            text-align: center;
+            border: 1px solid var(--silver);
+        }
+
+        /* أيقونة النجاح */
+        .success-icon {
+            width: 72px;
+            height: 72px;
+            background: rgba(26, 127, 212, 0.1);
+            color: var(--blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            margin: 0 auto 20px;
+            border: 2px solid rgba(26, 127, 212, 0.2);
+        }
+
+        h1 {
+            color: var(--navy);
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        .subtitle {
+            color: var(--muted);
+            font-size: 15px;
+            margin-bottom: 24px;
+            line-height: 1.5;
+        }
+
+        /* صندوق التنبيه الهاتفي */
+        .alert-box {
+            background: var(--ice);
+            border: 1px solid var(--cyan);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 24px;
+            text-align: right;
+        }
+
+        .alert-box h3 {
+            color: var(--royal);
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .alert-box p {
+            color: var(--text);
+            font-size: 14px;
+            line-height: 1.6;
+            font-weight: 600;
+        }
+
+        /* تفاصيل الخطوات القادمة */
+        .steps {
+            text-align: right;
+            border-top: 1px solid var(--silver);
+            padding-top: 20px;
+            margin-top: 20px;
+            margin-bottom: 24px;
+        }
+
+        .steps h4 {
+            color: var(--navy);
+            font-size: 15px;
+            margin-bottom: 12px;
+        }
+
+        .step-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 14px;
+            color: var(--muted);
+            margin-bottom: 8px;
+        }
+
+        .step-item span {
+            color: var(--blue);
+            font-weight: bold;
+        }
+
+        /* زر العودة للصفحة الرئيسية */
+        .back-btn {
+            display: inline-block;
+            width: 100%;
+            background: linear-gradient(135deg, var(--royal), var(--blue));
+            color: var(--white);
+            padding: 14px 20px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(26, 127, 212, 0.3);
+        }
+
+        .back-btn:hover {
+            opacity: 0.95;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(26, 127, 212, 0.4);
+        }
+    </style>
 </head>
 <body>
-  <div>
-    <h1>تم استلام طلبك بنجاح</h1>
-    <p>سيتواصل معك فريق Hoygi على الواتساب لتأكيد الطلب والتوصيل.</p>
-    <p><a href="index.html">العودة للصفحة</a></p>
-  </div>
+
+    <div class="thank-you-container">
+        
+        <!-- أيقونة التأكيد -->
+        <div class="success-icon">✓</div>
+
+        <h1>مبروك عليك! تم تسجيل طلبك بنجاح واستفدت من العرض 🎉</h1>
+        <p class="subtitle">شكراً لثقتك بنا. طلبك لسيروم "هويجي" قيد المعالجة الآن.</p>
+
+        <!-- تنبيه المكالمة الهاتفية لتأكيد الطلب -->
+        <div class="alert-box">
+            <h3>📞 تنبيه هام جداً لتأكيد الطلب</h3>
+            <p>سيتصل بك فريق هويجي خلال الساعات القليلة لتأكيد طلبك، المرجو أن تبقى قرب هاتفك وترد على المكالمة وتأكد طلبك.</p>
+        </div>
+
+        <!-- خطوات سريعة -->
+        <div class="steps">
+            <h4>ماذا يحدث بعد ذلك؟</h4>
+            <div class="step-item">
+                <span>1.</span>
+                <span>المكالمة الهاتفية: تأكيد سريع للبيانات والعنوان لضمان شحن الطلب.</span>
+            </div>
+            <div class="step-item">
+                <span>2.</span>
+                <span>الشحن والتوصيل: يصلك المندوب حتى باب البيت مع الدفع عند الاستلام.</span>
+            </div>
+        </div>
+
+        <!-- زر العودة للصفحة الرئيسية -->
+        <a href="index.html" class="back-btn">العودة إلى الصفحة الرئيسية</a>
+
+    </div>
+
 </body>
 </html>
