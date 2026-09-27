@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#0c4a8a" />
   <title>Hoygi — Blue Copper Peptide Essence</title>
-  <meta name="description" content="سيروم Hoygi Blue Copper Peptide — النظارة والشد لأكثر من 5000 خليجية. الدفع عند الاستلام." />
+  <meta name="description" content="سيروم Hoygi Blue Copper Peptide — النضارة والشد لأكثر من 5000 خليجية. الدفع عند الاستلام." />
+  
+  <!-- Preload Critical Image -->
   <link rel="preload" as="image" href="hero-before-after.png" fetchpriority="high" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
   <style>
     :root {
       --navy: #0c2d5a;
@@ -25,8 +25,7 @@
       --wa: #25d366;
       --radius: 18px;
       --max: 680px;
-      --font: "IBM Plex Sans Arabic", system-ui, sans-serif;
-      --display: "Cormorant Garamond", "IBM Plex Sans Arabic", serif;
+      --font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     }
     *, *::before, *::after { box-sizing: border-box; }
     html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
@@ -44,15 +43,13 @@
     .wrap { width: min(100% - 2rem, var(--max)); margin-inline: auto; }
 
     .hoygi-name {
-      font-family: var(--display);
       font-weight: 700;
       font-size: 1.12em;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.05em;
       color: var(--blue);
       text-transform: uppercase;
       display: inline-block;
       padding-inline: 0.15em;
-      text-shadow: 0 1px 0 rgba(255,255,255,0.4);
     }
     .benefits .hoygi-name,
     .pain .hoygi-name { color: var(--cyan); text-shadow: none; }
@@ -70,43 +67,14 @@
     .brand-masthead {
       margin: 0;
       padding: 1.35rem 1rem 1.1rem;
-      background:
-        radial-gradient(ellipse 90% 80% at 50% 0%, rgba(94, 196, 245, 0.22), transparent 55%),
-        linear-gradient(180deg, #f8fbff 0%, var(--white) 100%);
+      background: radial-gradient(ellipse 90% 80% at 50% 0%, rgba(94, 196, 245, 0.22), transparent 55%), linear-gradient(180deg, #f8fbff 0%, var(--white) 100%);
       border-bottom: 1px solid rgba(197, 212, 227, 0.65);
     }
-    .brand-masthead-inner {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-      max-width: var(--max);
-      margin-inline: auto;
-    }
-    .guarantee-seal {
-      flex-shrink: 0;
-      width: 4.5rem;
-      height: 4.5rem;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      text-align: center;
-      font-size: 0.55rem;
-      font-weight: 800;
-      line-height: 1.25;
-      color: var(--navy);
-      background: linear-gradient(145deg, #fff9e8, #e8d5a0);
-      border: 2px solid var(--gold);
-      box-shadow: 0 8px 24px -8px rgba(196, 160, 82, 0.55), inset 0 1px 0 rgba(255,255,255,0.9);
-    }
-    .guarantee-seal span { display: block; font-size: 1.35rem; line-height: 1; margin-bottom: 0.15rem; }
     .brand-lockup { text-align: center; }
     .brand-lockup .logo-word {
-      font-family: var(--display);
       font-size: clamp(2.4rem, 9vw, 3rem);
-      font-weight: 700;
-      letter-spacing: 0.14em;
+      font-weight: 800;
+      letter-spacing: 0.1em;
       color: var(--royal);
       line-height: 1;
       display: block;
@@ -115,7 +83,7 @@
       margin-top: 0.35rem;
       font-size: 0.68rem;
       font-weight: 600;
-      letter-spacing: 0.2em;
+      letter-spacing: 0.15em;
       text-transform: uppercase;
       color: var(--muted);
     }
@@ -133,9 +101,8 @@
       gap: 0.85rem;
     }
     .headline-split .hl-part-a {
-      font-family: var(--display);
       font-size: clamp(1.35rem, 4.8vw, 1.75rem);
-      font-weight: 700;
+      font-weight: 800;
       line-height: 1.45;
       color: #8b2942;
     }
@@ -173,24 +140,18 @@
     section { padding: 2.75rem 0; }
     section + section { border-top: 1px solid rgba(197, 212, 227, 0.55); }
     .section-title {
-      font-family: var(--display);
       font-size: clamp(1.35rem, 4.5vw, 1.65rem);
       color: var(--navy);
       margin: 0 0 1.25rem;
       line-height: 1.4;
-      font-weight: 700;
+      font-weight: 800;
     }
 
+    /* Ultra Fast Pain Section without heavy external images */
     .pain {
       position: relative;
-      background: url("https://images.unsplash.com/photo-1524502397800-2ff866a74377?q=70&w=1200&auto=format&fit=crop") center / cover no-repeat;
+      background: linear-gradient(180deg, #0f2744 0%, #0c2d5a 100%);
       border-top: none;
-    }
-    .pain::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, rgba(12, 29, 48, 0.88), rgba(12, 45, 90, 0.78));
     }
     .pain .wrap { position: relative; z-index: 1; }
     .pain .section-title { color: #fff; text-shadow: 0 2px 12px rgba(0,0,0,0.35); }
@@ -201,7 +162,7 @@
       background: rgba(255, 255, 255, 0.96);
       border-radius: 14px;
       border: 1px solid rgba(255, 255, 255, 0.5);
-      font-weight: 500;
+      font-weight: 600;
       font-size: 0.98rem;
       box-shadow: 0 12px 28px -16px rgba(0, 0, 0, 0.35);
     }
@@ -212,20 +173,12 @@
       border-top: none;
       position: relative;
     }
-    .benefits::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(94, 196, 245, 0.15), transparent 60%);
-      pointer-events: none;
-    }
     .benefits .wrap { position: relative; z-index: 1; }
     .benefits .section-title { color: #fff; }
     .benefits .list li {
       background: rgba(255, 255, 255, 0.08);
       border-color: rgba(255, 255, 255, 0.18);
       color: #f0f7ff;
-      backdrop-filter: blur(6px);
       box-shadow: none;
     }
 
@@ -248,37 +201,25 @@
       color: #fff;
       background: linear-gradient(180deg, #2a8fe8 0%, var(--blue) 45%, var(--royal) 100%);
       border-bottom: 4px solid #0a3568;
-      box-shadow: 0 14px 28px -10px rgba(26, 127, 212, 0.65), inset 0 1px 0 rgba(255,255,255,0.25);
-      transition: transform 0.12s ease, box-shadow 0.12s ease;
+      box-shadow: 0 14px 28px -10px rgba(26, 127, 212, 0.65);
+      transition: transform 0.12s ease;
+      will-change: transform;
       -webkit-tap-highlight-color: transparent;
     }
-    .cta::after {
-      content: "◀";
-      font-size: 0.75rem;
-      opacity: 0.85;
-    }
-    .cta:hover { box-shadow: 0 18px 32px -10px rgba(26, 127, 212, 0.75), inset 0 1px 0 rgba(255,255,255,0.3); }
+    .cta::after { content: "◀"; font-size: 0.75rem; opacity: 0.85; }
     .cta:active { transform: translateY(2px); border-bottom-width: 2px; }
     .cta--gold {
       background: linear-gradient(180deg, #e8cc7a 0%, var(--gold) 50%, #a8843a 100%);
       color: var(--navy);
       border-bottom-color: #7a6328;
-      box-shadow: 0 14px 28px -10px rgba(196, 160, 82, 0.55), inset 0 1px 0 rgba(255,255,255,0.35);
+      box-shadow: 0 14px 28px -10px rgba(196, 160, 82, 0.55);
     }
     .cta--green {
       background: linear-gradient(180deg, #3ddf7a 0%, var(--wa) 45%, #1da851 100%);
       border-bottom-color: #128c3a;
-      box-shadow: 0 14px 28px -10px rgba(37, 211, 102, 0.55), inset 0 1px 0 rgba(255,255,255,0.3);
+      box-shadow: 0 14px 28px -10px rgba(37, 211, 102, 0.55);
     }
-    .cta--form {
-      font-size: 1.12rem;
-      padding: 1.15rem;
-      animation: ctaPulse 2.5s ease-in-out infinite;
-    }
-    @keyframes ctaPulse {
-      0%, 100% { box-shadow: 0 14px 28px -10px rgba(26, 127, 212, 0.65), inset 0 1px 0 rgba(255,255,255,0.25); }
-      50% { box-shadow: 0 18px 36px -8px rgba(26, 127, 212, 0.85), 0 0 0 4px rgba(26, 127, 212, 0.15); }
-    }
+    .cta--form { font-size: 1.12rem; padding: 1.15rem; }
 
     .wa-slider {
       position: relative;
@@ -292,7 +233,7 @@
       position: absolute;
       inset: 0;
       opacity: 0;
-      transition: opacity 0.6s ease;
+      transition: opacity 0.4s ease;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -300,7 +241,6 @@
     }
     .wa-slide.is-active { opacity: 1; position: relative; z-index: 1; }
     .wa-slide img { width: 100%; max-height: 520px; object-fit: contain; border-radius: 12px; }
-    .wa-placeholder { text-align: center; padding: 2rem; color: #54656f; font-size: 0.9rem; }
     .wa-dots { display: flex; justify-content: center; gap: 0.5rem; margin-top: 1rem; }
     .wa-dots button {
       width: 8px; height: 8px; border-radius: 50%; border: none;
@@ -310,12 +250,11 @@
 
     .zigzag-title {
       text-align: center;
-      font-family: var(--display);
       font-size: clamp(1.25rem, 4vw, 1.5rem);
       color: var(--navy);
       margin: 0 0 2rem;
       line-height: 1.45;
-      font-weight: 700;
+      font-weight: 800;
     }
     .zig-row {
       display: grid;
@@ -336,18 +275,10 @@
       border-right: 3px solid var(--blue);
       line-height: 1.45;
     }
-    .zig-img {
-      border-radius: 12px;
-      overflow: hidden;
-      background: var(--ice);
-    }
+    .zig-img { border-radius: 12px; overflow: hidden; background: var(--ice); }
     .zig-img img { width: 100%; object-fit: contain; aspect-ratio: 1; }
 
-    .ingredients-img {
-      border-radius: var(--radius);
-      overflow: hidden;
-      border: 1px solid rgba(19, 74, 140, 0.1);
-    }
+    .ingredients-img { border-radius: var(--radius); overflow: hidden; border: 1px solid rgba(19, 74, 140, 0.1); }
 
     .steps { counter-reset: step; list-style: none; padding: 0; margin: 0; }
     .steps li {
@@ -356,7 +287,7 @@
       padding: 0.85rem 1rem 0.85rem 0;
       padding-right: 2.75rem;
       border-bottom: 1px dashed rgba(197, 212, 227, 0.8);
-      font-weight: 500;
+      font-weight: 600;
     }
     .steps li:last-child { border-bottom: none; }
     .steps li::before {
@@ -393,36 +324,17 @@
       color: var(--navy);
     }
 
-    .offers-block {
-      margin-top: 2rem;
-      padding-top: 0.5rem;
-    }
-    .offer-lead {
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: var(--navy);
-      text-align: center;
-      margin: 0 0 1.35rem;
-      line-height: 1.55;
-    }
-    .offer-cards {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
+    .offers-block { margin-top: 2rem; padding-top: 0.5rem; }
+    .offer-lead { font-size: 1.05rem; font-weight: 700; color: var(--navy); text-align: center; margin: 0 0 1.35rem; line-height: 1.55; }
+    .offer-cards { display: flex; flex-direction: column; gap: 1rem; }
     .offer-cards a {
       display: block;
       border-radius: var(--radius);
       overflow: hidden;
-      border: 2px solid transparent;
       box-shadow: 0 16px 36px -20px rgba(12, 45, 90, 0.35);
-      transition: transform 0.15s ease, border-color 0.15s ease;
+      transition: transform 0.15s ease;
     }
     .offer-cards a:active { transform: scale(0.98); }
-    .offer-cards a:focus-visible {
-      outline: 3px solid var(--blue);
-      border-color: var(--gold);
-    }
 
     .form-section { background: var(--ice); }
     .form-card {
@@ -432,15 +344,8 @@
       border: 1px solid var(--silver);
       box-shadow: 0 20px 40px -24px rgba(12, 45, 90, 0.18);
     }
-    .form-card label.field-label {
-      display: block;
-      font-size: 0.85rem;
-      font-weight: 600;
-      margin-bottom: 0.35rem;
-      color: var(--navy);
-    }
-    .form-card input,
-    .form-card select {
+    .form-card label.field-label { display: block; font-size: 0.85rem; font-weight: 700; margin-bottom: 0.35rem; color: var(--navy); }
+    .form-card input, .form-card select {
       width: 100%;
       padding: 0.75rem 0.85rem;
       margin-bottom: 1rem;
@@ -449,11 +354,6 @@
       font-family: inherit;
       font-size: 1rem;
       background: #fff;
-    }
-    .form-card input:focus,
-    .form-card select:focus {
-      outline: 2px solid rgba(26, 127, 212, 0.35);
-      border-color: var(--blue);
     }
 
     .sticky-bar {
@@ -464,38 +364,27 @@
       z-index: 50;
       padding: 0.65rem 1rem calc(0.65rem + env(safe-area-inset-bottom));
       background: rgba(252, 253, 255, 0.94);
-      backdrop-filter: blur(10px);
       border-top: 1px solid var(--silver);
-      transform: translateY(100%);
+      transform: translate3d(0, 100%, 0);
       transition: transform 0.25s ease;
+      will-change: transform;
     }
-    .sticky-bar.is-visible { transform: translateY(0); }
+    .sticky-bar.is-visible { transform: translate3d(0, 0, 0); }
     .sticky-bar .cta { margin: 0; font-size: 0.95rem; padding: 0.9rem; }
 
-    footer {
-      text-align: center;
-      padding: 2rem 1rem 5.5rem;
-      font-size: 0.8rem;
-      color: var(--muted);
-    }
+    footer { text-align: center; padding: 2rem 1rem 5.5rem; font-size: 0.8rem; color: var(--muted); }
     footer .hoygi-name { font-size: 1.25rem; }
-
-    @media (prefers-reduced-motion: reduce) {
-      .wa-slide { transition: none; }
-      .cta--form { animation: none; }
-    }
   </style>
 </head>
 <body>
   <p class="prehead">لكل بنت دور على النظارة و الامتلاء الطبيعي .. الحقي العرض لليوم فقط</p>
 
   <header class="brand-masthead">
-    <!-- حاوية الشعار والعنوان الفرعي -->
     <div class="brand-lockup">
-        <span class="logo-word hoygi-name" style="text-transform:uppercase;color:var(--royal);">Hoygi</span>
+        <span class="logo-word hoygi-name">Hoygi</span>
         <span class="logo-sub">Blue Copper Peptide Essence</span>
     </div>
-</header>
+  </header>
 
   <section class="hero">
     <div class="wrap">
@@ -523,18 +412,15 @@
     </div>
   </section>
 
-<div style="text-center; margin: 20px 0;">
-    <img src="beforeafter.jpg" 
-         alt="مقارنة البشرة قبل وبعد سيروم هويجي" 
-         loading="lazy" 
-         style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" />
-</div>
-  
+  <div style="text-align: center; margin: 20px 0;">
+      <img src="beforeafter.jpg" alt="مقارنة البشرة قبل وبعد سيروم هويجي" loading="lazy" width="800" height="600" decoding="async" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" />
+  </div>
+
   <section class="benefits">
     <div class="wrap">
       <h2 class="section-title">لا تقلقين المشكل مو فيك أبد.. ومو بنفسج اللي تعاني!<br /> بس جاوبيني قبل، هل فعلاً تبين..</h2>
       <ul class="list">
-        <li>👑 "تصيرين تبين أصغر وأجمل من رfيجاتج، والكل ينصدم لما يسمع عمرج كم!"</li>
+        <li>👑 "تصيرين تبين أصغر وأجمل من رفيجاتج، والكل ينصدم لما يسمع عمرج كم!"</li>
         <li>✨ "تكونين نجمة العزايم والطلعات، والكل يلتفت لبشرتج."</li>
         <li>روتين خفيف و المكياج يبقى املس طول اليوم وما يكتل</li>
         <li>💅 "تخلي اللي كانوا يعيبون على بشرتج يرجعون اليوم يطلبون منج السر."</li>
@@ -548,19 +434,19 @@
       <h2 class="section-title">💬 وهذا بالإثبات.. مو كلام فاضي شوفي آراء عملائنا!</h2>
       <div class="wa-slider" id="waSlider" aria-live="polite">
         <div class="wa-slide is-active" data-index="0">
-          <img src="assetswhatsapp-1.webp" alt="محادثة واتساب 1" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('p'),{className:'wa-placeholder',textContent:'ضعي صورة المحادثة في assets/whatsapp-1.png'}))" />
+          <img src="assetswhatsapp-1.webp" alt="محادثة واتساب 1" loading="lazy" decoding="async" />
         </div>
         <div class="wa-slide" data-index="1">
-          <img src="assetswhatsapp-2.webp" alt="محادثة واتساب 2" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('p'),{className:'wa-placeholder',textContent:'ضعي صورة المحادثة في assets/whatsapp-2.png'}))" />
+          <img src="assetswhatsapp-2.webp" alt="محادثة واتساب 2" loading="lazy" decoding="async" />
         </div>
         <div class="wa-slide" data-index="2">
-          <img src="assetswhatsapp-3.webp" alt="محادثة واتساب 3" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('p'),{className:'wa-placeholder',textContent:'ضعي صورة المحادثة في assets/whatsapp-3.png'}))" />
+          <img src="assetswhatsapp-3.webp" alt="محادثة واتساب 3" loading="lazy" decoding="async" />
         </div>
         <div class="wa-slide" data-index="3">
-          <img src="assetswhatsapp-4.webp" alt="محادثة واتساب 4" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('p'),{className:'wa-placeholder',textContent:'ضعي صورة المحادثة في assets/whatsapp-4.png'}))" />
+          <img src="assetswhatsapp-4.webp" alt="محادثة واتساب 4" loading="lazy" decoding="async" />
         </div>
       </div>
-      <div class="wa-dots" id="waDots" aria-hidden="true"></div>
+      <div class="wa-dots" id="waDots"></div>
       <a class="cta" href="#order">أبي بشرة أحلامي مثل هالبنات</a>
     </div>
   </section>
@@ -599,9 +485,9 @@
 
   <section class="usage">
     <div class="wrap">
-      <p class="section-title" style="font-size:1.05rem;font-family:var(--font);font-weight:700;">للحصول على أفضل نتيجة ممكنة وتأثير مضاعف يشبه إبر النظارة و البوتوكس:</p>
+      <p class="section-title" style="font-size:1.05rem;font-weight:700;">للحصول على أفضل نتيجة ممكنة وتأثير مضاعف يشبه إبر النظارة و البوتوكس:</p>
       <ol class="steps">
-        <li>ابدئي بغسل وجهك بالغسول المفضل لديك وتنشيفه برfق</li>
+        <li>ابدئي بغسل وجهك بالغسول المفضل لديك وتنشيفه برفق</li>
         <li>استخدميه صباحا و مساء لنتيجة اسرع</li>
         <li>ولا تنسي تطبيق واقي الشمس في الفترة الصباحية.</li>
       </ol>
@@ -612,7 +498,7 @@
     <div class="wrap">
       <div class="guarantee-box">
         <h2 class="section-title" style="margin-bottom:0.5rem;">ضمان الذهبي للاسترداد بدون شروط معقدة:</h2>
-        <p>نحن نثق تماماً في جودة وفعالية سيروم البيبتيدات  ونتايجه المذهلة على كل ن جربه . فإذا لم تلاحظي الفرق الواضح في صfاء بشرتك ونضارتها خلال شهر، أو إذا لم يكن المنتج مطابقاً لما وعدناك به..  من حقك استرداد أموالك كاملة دون أي نقاش.</p>
+        <p>نحن نثق تماماً في جودة وفعالية سيروم البيبتيدات ونتايجه المذهلة على كل من جربه. فإذا لم تلاحظي الفرق الواضح في صفاء بشرتك ونضارتها خلال شهر، أو إذا لم يكن المنتج مطابقاً لما وعدناك به.. من حقك استرداد أموالك كاملة دون أي نقاش.</p>
         <div class="trust-row">
           <span>🛡️ منتج أصلي ومضمون 100%</span>
           <span>💵 الدفع عند الاستلام</span>
@@ -633,19 +519,22 @@
 
   <section class="form-section" id="order">
     <div class="wrap">
-      <form class="form-card" id="orderForm" action="thank-you.html" method="get">
+      <form class="form-card" id="orderForm" onsubmit="sendOrder(event)">
         <label class="field-label" for="offer">اختيار العرض المناسب</label>
         <select id="offer" name="offer" required>
           <option value="">—</option>
-          <option value="199">3 سيرومات ب  ريال199</option>
+          <option value="199">3 سيرومات ب 199 ريال</option>
           <option value="259">4 سيرومات ب 259 ريال</option>
-          <option value="299">5سيرومات ب 299 ريال</option>
+          <option value="299">5 سيرومات ب 299 ريال</option>
         </select>
+
         <label class="field-label" for="name">الاسم</label>
-        <input id="name" name="name" type="text" required autocomplete="name" />
+        <input id="name" name="name" type="text" required autocomplete="name" placeholder="الاسم الكامل" />
+
         <label class="field-label" for="phone">الجوال</label>
-        <input id="phone" name="phone" type="tel" required inputmode="tel" autocomplete="tel" />
-        <button type="submit" class="cta cta--form">اضغط هنا لاتمام الطلب</button>
+        <input id="phone" name="phone" type="tel" required inputmode="tel" autocomplete="tel" placeholder="رقم الجوال" />
+
+        <button type="submit" id="submitBtn" class="cta cta--form">اضغط هنا لاتمام الطلب</button>
       </form>
     </div>
   </section>
@@ -660,6 +549,7 @@
 
   <script>
     (function () {
+      /* ━━━ Slider ━━━ */
       var slides = document.querySelectorAll(".wa-slide");
       var dotsEl = document.getElementById("waDots");
       var i = 0;
@@ -673,7 +563,7 @@
         });
         function go(n) {
           slides[i].classList.remove("is-active");
-          i = n % slides.length;
+          i = (n + slides.length) % slides.length;
           slides[i].classList.add("is-active");
           dotsEl.querySelectorAll("button").forEach(function (d, j) {
             d.classList.toggle("is-active", j === i);
@@ -682,11 +572,12 @@
         var timer;
         function resetTimer() {
           clearInterval(timer);
-          timer = setInterval(function () { go(i + 1); }, 10000);
+          timer = setInterval(function () { go(i + 1); }, 8000);
         }
         resetTimer();
       }
 
+      /* ━━━ Quick Select Offer ━━━ */
       var offerSelect = document.getElementById("offer");
       document.querySelectorAll(".offer-link").forEach(function (link) {
         link.addEventListener("click", function () {
@@ -695,6 +586,7 @@
         });
       });
 
+      /* ━━━ Sticky Bar Performance Optimization ━━━ */
       var bar = document.getElementById("stickyBar");
       var hero = document.querySelector(".hero");
       if (bar && hero && "IntersectionObserver" in window) {
@@ -705,6 +597,66 @@
         bar.classList.add("is-visible");
       }
     })();
+
+    /* ━━━ Ultra-Fast Send Order Function (Google Sheets + Pixels) ━━━ */
+    function sendOrder(event) {
+      if (event) event.preventDefault();
+
+      var nameEl  = document.getElementById('name');
+      var phoneEl = document.getElementById('phone');
+      var pkgEl   = document.getElementById('offer');
+      var btn     = document.getElementById('submitBtn');
+
+      var name  = nameEl ? nameEl.value.trim() : '';
+      var phone = phoneEl ? phoneEl.value.trim() : '';
+      var pkg   = pkgEl ? pkgEl.value : '';
+      var scriptURL = 'https://script.google.com/macros/s/AKfycbxeg5xp7ZRXC-r-L5NrTDicOgXJiwNoZ4J70IH3V8XPiCAKwhvjmd-lQQIvTOMYR64/exec';
+
+      if (!name || !phone || !pkg) {
+        alert('يرجى اختيار العرض وملء جميع البيانات');
+        return;
+      }
+
+      if (btn) {
+        btn.innerText = '⏳ جاري إرسال الطلب...';
+        btn.disabled = true;
+      }
+
+      var quantity = '3', price = pkg, notes = 'عرض 3 سيرومات بـ 199';
+      if (pkg === '259') {
+        quantity = '4'; notes = 'عرض 4 سيرومات بـ 259';
+      } else if (pkg === '299') {
+        quantity = '5'; notes = 'عرض 5 سيرومات بـ 299';
+      }
+
+      /* Meta & TikTok Pixels Track */
+      if (typeof fbq !== 'undefined') {
+        fbq('track', 'Purchase', { content_name: 'Hoygi Serum', value: Number(price), currency: 'SAR' });
+      }
+      if (typeof ttq !== 'undefined') {
+        ttq.track('CompletePayment', { content_name: 'Hoygi Serum', value: Number(price), currency: 'SAR' });
+      }
+
+      /* Non-blocking Fetch to Google Sheets */
+      var params = new URLSearchParams({
+        country: 'Saudi Arabia',
+        name: name,
+        phone: phone,
+        url: window.location.href,
+        sku: 'HOYGI-SERUM-01',
+        Product: 'سيروم Hoygi Blue Copper Peptide',
+        quantity: quantity,
+        price: price,
+        currency: 'ريال',
+        notes: notes
+      });
+
+      fetch(scriptURL + '?' + params.toString(), { mode: 'no-cors', method: 'GET' });
+
+      setTimeout(function() {
+        window.location.href = 'thank-you.html';
+      }, 1200);
+    }
   </script>
 </body>
 </html>
