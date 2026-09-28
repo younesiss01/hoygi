@@ -36,6 +36,43 @@
     }
     *, *::before, *::after { box-sizing: border-box; }
     html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    /* تنسيقات قسم الفوائد */
+.benefits-section {
+  background-color: #a2ddff;
+  background: linear-gradient(180deg, #d8f1ff 0%, #a2ddff 100%);
+  padding: 32px 16px;
+}
+.benefits-section .wrap {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.benefits-section .section-title {
+  color: #082142;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.benefits-section .list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.benefits-section .list li {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 14px 16px;
+  color: #0c2d5a;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+  border: 1px solid #c5d4e3;
+}
     body {
       margin: 0;
       font-family: var(--font);
@@ -427,47 +464,6 @@
   <div style="text-align: center; margin: 20px 0;">
       <img src="beforeafter.webp" alt="مقارنة بين البشرة قبل وبعد استخدام سيروم هويجي" loading="lazy" width="800" height="600" decoding="async" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" />
   </div>
-
-<!-- ━━━ قسم الفوائد (معدل بكود مباشر وسريع) ━━━ -->
-<style>
-  .benefits-section {
-    background: linear-gradient(180deg, #d8f1ff 0%, #a2ddff 50%, #6ecbfa 100%);
-    padding: 36px 16px;
-    position: relative;
-  }
-  .benefits-section .wrap {
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  .benefits-section .section-title {
-    color: #082142;
-    font-size: 19px;
-    font-weight: 700;
-    line-height: 1.5;
-    text-align: center;
-    margin-bottom: 22px;
-  }
-  .benefits-section .list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-  .benefits-section .list li {
-    background-color: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.8);
-    border-radius: 14px;
-    padding: 16px 18px;
-    color: #0c2d5a;
-    font-size: 15px;
-    font-weight: 600;
-    line-height: 1.5;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(12, 45, 90, 0.06);
-  }
-</style>
 
 <section class="benefits-section">
   <div class="wrap">
