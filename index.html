@@ -335,6 +335,33 @@
     .ingredients-img { border-radius: var(--radius); overflow: hidden; border: 1px solid rgba(19, 74, 140, 0.15); }
 
     /* تنسيق خطوات الاستخدام الأنيق والسريع */
+/* ━━━ قسم خطوات الاستخدام (نمط الزيج زاج الخفيف والسريع) ━━━ */
+.usage {
+  padding: 36px 16px;
+  background-color: #f8fbfe;
+}
+
+.usage .wrap {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* العنوان الرئيسي البارز والأنيق */
+.usage .section-title {
+  text-align: center;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #082142;
+  line-height: 1.6;
+  margin-bottom: 28px;
+  padding: 14px 18px;
+  background: linear-gradient(135deg, #e3f4fe 0%, #ffffff 100%);
+  border: 1px solid #b3e3ff;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(10, 37, 74, 0.04);
+}
+
+/* قائمة الخطوات بنمط الزيج زاج */
 .steps {
   counter-reset: step;
   list-style: none;
@@ -342,39 +369,87 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 20px;
 }
 
 .steps li {
   counter-increment: step;
-  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
   background: #ffffff;
   border: 1px solid #d8e8f8;
-  border-radius: 14px;
-  padding: 16px 16px 16px 48px;
-  font-size: 15px;
-  font-weight: 700;
-  color: #0c2d5a;
-  line-height: 1.5;
+  border-radius: 16px;
+  padding: 16px;
   box-shadow: 0 4px 12px rgba(12, 45, 90, 0.04);
 }
 
-.steps li::before {
+/* التبادل (الزيج زاج): العناصر الزوجية تعكس الاتجاه */
+.steps li:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+/* محتوى النص داخل البطاقة */
+.steps .step-text {
+  flex: 1;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0c2d5a;
+  line-height: 1.6;
+  position: relative;
+  padding-right: 36px;
+}
+
+/* الدائرة الرقمية للخطوة */
+.steps .step-text::before {
   content: counter(step);
   position: absolute;
-  right: 14px;
+  right: 0;
   top: 50%;
   transform: translateY(-50%);
-  width: 28px;
-  height: 28px;
+  width: 26px;
+  height: 26px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #103e75 0%, #1464a8 100%);
+  background: #103e75;
   color: #ffffff;
-  font-size: 14px;
+  font-size: 0.85rem;
   font-weight: 800;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.steps li:nth-child(even) .step-text {
+  padding-right: 36px;
+}
+
+/* مكان الصورة المصغرة لكل خطوة */
+.steps .step-img {
+  width: 90px;
+  height: 90px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #edf6ff;
+  border: 1px solid #c8e3fc;
+}
+
+.steps .step-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* تجاوب الشاشات الصغيرة جداً */
+@media (max-width: 380px) {
+  .steps .step-img {
+    width: 75px;
+    height: 75px;
+  }
+  .steps .step-text {
+    font-size: 0.88rem;
+  }
 }
 
     .guarantee-box {
@@ -558,15 +633,49 @@
   </section>
 
   <section class="usage">
-    <div class="wrap">
-      <p class="section-title" style="font-size:1.05rem;font-weight:800;">للحصول على أفضل نتيجة ممكنة وتأثير مضاعف يشبه إبر النظارة و البوتوكس:</p>
-      <ol class="steps">
-        <li>ابدئي بغسل وجهك بالغسول المفضل لديك وتنشيفه برفق</li>
-        <li>استخدميه صباحا و مساء لنتيجة اسرع</li>
-        <li>ولا تنسي تطبيق واقي الشمس في الفترة الصباحية.</li>
-      </ol>
-    </div>
-  </section>
+  <div class="wrap">
+    <!-- العنوان البارز والأنيق -->
+    <h2 class="section-title">
+      ✨ للحصول على أفضل نتيجة ممكنة وتأثير مضاعف يشبه إبر النظارة والبوتوكس:
+    </h2>
+
+    <!-- قائمة الخطوات بطريقة الزيج زاج -->
+    <ol class="steps">
+      <!-- الخطوة 1: النص يمين والصورة يسار -->
+      <li>
+        <div class="step-text">
+          ابدئي بغسل وجهك بالغسول المفضل لديك وتنشيفه برفق
+        </div>
+        <div class="step-img">
+          <!-- ضع رابط الصورة الأولى هنا -->
+          <img src="IMAGE_URL_1.jpg" alt="غسل الوجه" loading="lazy" width="90" height="90" />
+        </div>
+      </li>
+
+      <!-- الخطوة 2: الصورة يمين والنص يسار (تلقائياً بالـ CSS) -->
+      <li>
+        <div class="step-text">
+          استخدميه صباحاً ومساءً لنتيجة أسرع وأوضح
+        </div>
+        <div class="step-img">
+          <!-- ضع رابط الصورة الثانية هنا -->
+          <img src="IMAGE_URL_2.jpg" alt="تطبيق السيروم" loading="lazy" width="90" height="90" />
+        </div>
+      </li>
+
+      <!-- الخطوة 3: النص يمين والصورة يسار -->
+      <li>
+        <div class="step-text">
+          ولا تنسي تطبيق واقي الشمس في الفترة الصباحية لحماية بشرتك
+        </div>
+        <div class="step-img">
+          <!-- ضع رابط الصورة الثالثة هنا -->
+          <img src="IMAGE_URL_3.jpg" alt="واقي الشمس" loading="lazy" width="90" height="90" />
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
 
   <section class="guarantee">
     <div class="wrap">
