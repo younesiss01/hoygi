@@ -199,25 +199,62 @@
     }
 
     /* Ultra Fast Pain Section without heavy external images */
-    .pain {
-      position: relative;
-      background: linear-gradient(180deg, #0a1f38 0%, #082142 100%);
-      border-top: none;
-    }
-    .pain .wrap { position: relative; z-index: 1; }
-    .pain .section-title { color: #ffffff; text-shadow: 0 2px 12px rgba(0,0,0,0.35); }
+   /* ━━━ الستايل الجديد الداكن لقسم نقاط الألم ━━━ */
+.pain {
+  position: relative;
+  /* خلفية داكنة جداً مع تدرج فخم وتأثير صورة خلفية إن وُجدت */
+  background: linear-gradient(180deg, rgba(10, 25, 47, 0.88) 0%, rgba(8, 20, 38, 0.95) 100%), 
+              url('hero-before-after.webp') center/cover no-repeat;
+  background-color: #081426; /* لون احتياطي داكن */
+  padding: 42px 16px;
+  color: #ffffff;
+}
 
-    .list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1rem; }
-    .list li {
-      padding: 1rem 1.1rem;
-      background: rgba(255, 255, 255, 0.98);
-      border-radius: 14px;
-      border: 1px solid rgba(255, 255, 255, 0.8);
-      font-weight: 700;
-      font-size: 0.98rem;
-      color: var(--text);
-      box-shadow: 0 12px 28px -16px rgba(0, 0, 0, 0.35);
-    }
+.pain .wrap {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* العنوان الرئيسي للقسم */
+.pain .section-title {
+  color: #ffffff;
+  font-size: 1.35rem;
+  font-weight: 800;
+  line-height: 1.5;
+  margin-bottom: 24px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* القائمة الأنيقة المفصولة بخطوط فقط (بدون الكروت البيضاء) */
+.pain .list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.pain .list li {
+  padding: 16px 8px;
+  background: transparent; /* إزالة الخلفية البيضاء */
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18); /* خط فاصل خفيف ونظيف */
+  border-radius: 0;
+  box-shadow: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #f1f5f9; /* لون نص أبيض ناصع مريح للعين */
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* خط علوي لأول عنصر في القائمة لإكمال الإطار */
+.pain .list li:first-child {
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
 
     .benefits {
       background: linear-gradient(165deg, var(--navy) 0%, #0a2d54 55%, var(--royal) 100%);
