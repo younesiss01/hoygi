@@ -198,14 +198,18 @@
       font-weight: 800;
     }
 
-    /* Ultra Fast Pain Section without heavy external images */
-   /* ━━━ الستايل الجديد الداكن لقسم نقاط الألم ━━━ */
+  /* ━━━ الستايل المطور لقسم نقاط الألم بالتدرج السيرومي ━━━ */
 .pain {
   position: relative;
-  /* خلفية داكنة جداً مع تدرج فخم وتأثير صورة خلفية إن وُجدت */
-  background: linear-gradient(180deg, rgba(10, 25, 47, 0.88) 0%, rgba(8, 20, 38, 0.95) 100%), 
-              url('hero-before-after.webp') center/cover no-repeat;
-  background-color: #081426; /* لون احتياطي داكن */
+  /* تدرج شفاف ثلاثي يبدأ داكناً وينتهي بأزرق سيرومي أنيق فوق صورة الخلفية */
+  background: linear-gradient(
+        180deg,
+        rgba(7, 21, 39, 0.92) 0%,
+        rgba(13, 40, 76, 0.88) 50%,
+        rgba(21, 62, 112, 0.85) 100%
+      ),
+      url('hero-before-after.webp') center/cover no-repeat;
+  background-color: #071527; /* لون احتياطي داكن */
   padding: 42px 16px;
   color: #ffffff;
 }
@@ -225,10 +229,10 @@
   font-weight: 800;
   line-height: 1.5;
   margin-bottom: 24px;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
 }
 
-/* القائمة الأنيقة المفصولة بخطوط فقط (بدون الكروت البيضاء) */
+/* القائمة الأنيقة المفصولة بخطوط فقط */
 .pain .list {
   list-style: none;
   padding: 0;
@@ -239,19 +243,19 @@
 
 .pain .list li {
   padding: 16px 8px;
-  background: transparent; /* إزالة الخلفية البيضاء */
+  background: transparent;
   border: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.18); /* خط فاصل خفيف ونظيف */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 0;
   box-shadow: none;
   font-weight: 700;
   font-size: 0.95rem;
-  color: #f1f5f9; /* لون نص أبيض ناصع مريح للعين */
+  color: #ffffff;
   line-height: 1.6;
   text-align: center;
 }
 
-/* خط علوي لأول عنصر في القائمة لإكمال الإطار */
+/* خط علوي لأول عنصر في القائمة */
 .pain .list li:first-child {
   border-top: 1px solid rgba(255, 255, 255, 0.18);
 }
