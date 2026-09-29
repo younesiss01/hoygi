@@ -538,37 +538,60 @@
 }
 
     .offers-block { margin-top: 2rem; padding-top: 0.5rem; }
-    .offer-lead { font-size: 1.05rem; font-weight: 800; color: var(--navy); text-align: center; margin: 0 0 1.35rem; line-height: 1.55; }
-    .offer-cards { display: flex; flex-direction: column; gap: 1rem; }
-    .offer-cards a {
-      display: block;
-      border-radius: var(--radius);
-      overflow: hidden;
-      box-shadow: 0 16px 36px -20px rgba(12, 45, 90, 0.35);
-      transition: transform 0.15s ease;
-    }
-    .offer-cards a:active { transform: scale(0.98); }
 
-    .form-section { background: var(--ice); }
-    .form-card {
-      background: var(--white);
-      border-radius: var(--radius);
-      padding: 1.35rem 1.25rem;
-      border: 1px solid var(--silver);
-      box-shadow: 0 20px 40px -24px rgba(12, 45, 90, 0.18);
-    }
-    .form-card label.field-label { display: block; font-size: 0.9rem; font-weight: 800; margin-bottom: 0.35rem; color: var(--navy); }
-    .form-card input, .form-card select {
-      width: 100%;
-      padding: 0.75rem 0.85rem;
-      margin-bottom: 1rem;
-      border: 1px solid var(--silver);
-      border-radius: 10px;
-      font-family: inherit;
-      font-size: 1rem;
-      background: #ffffff;
-      color: var(--text);
-    }
+/* ━━━ تعديل جملة تقديم العرض إلى الأزرق الملكي والذهبي ━━━ */
+.offer-lead {
+  background: linear-gradient(135deg, #0a2540 0%, #081a2f 100%); /* أزرق ملكي داكن وفخم */
+  border: 1.5px solid #d4af37; /* إطار ذهبي ملكي */
+  border-radius: var(--radius);
+  padding: 1.1rem 1.25rem;
+  margin: 0 0 1.35rem;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #fce8a6; /* كتابة باللون الذهبي الدافئ */
+  text-align: center;
+  line-height: 1.65;
+  box-shadow: 0 8px 24px rgba(10, 37, 64, 0.22);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* في حال وجود نصوص داخل span لتمييزها باللون الأبيض */
+.offer-lead span {
+  color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.offer-cards { display: flex; flex-direction: column; gap: 1rem; }
+.offer-cards a {
+  display: block;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 16px 36px -20px rgba(12, 45, 90, 0.35);
+  transition: transform 0.15s ease;
+}
+.offer-cards a:active { transform: scale(0.98); }
+
+.form-section { background: var(--ice); }
+.form-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 1.35rem 1.25rem;
+  border: 1px solid var(--silver);
+  box-shadow: 0 20px 40px -24px rgba(12, 45, 90, 0.18);
+}
+.form-card label.field-label { display: block; font-size: 0.9rem; font-weight: 800; margin-bottom: 0.35rem; color: var(--navy); }
+.form-card input, .form-card select {
+  width: 100%;
+  padding: 0.75rem 0.85rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--silver);
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 1rem;
+  background: #ffffff;
+  color: var(--text);
+}
 
     .sticky-bar {
       position: fixed;
