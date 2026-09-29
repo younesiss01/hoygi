@@ -208,7 +208,7 @@
         rgba(13, 40, 76, 0.85) 50%,
         rgba(7, 21, 39, 0.92) 100%
       ),
-      url('hero-before-after.webp') center/cover no-repeat;
+      url('pain.webp') center/cover no-repeat;
   background-color: #0d284c; /* لون احتياطي متوسط */
   padding: 42px 16px;
   color: #ffffff;
@@ -493,23 +493,49 @@
   }
 }
 
-    .guarantee-box {
-      background: linear-gradient(180deg, var(--ice), var(--white));
-      border: 1px solid var(--silver);
-      border-radius: var(--radius);
-      padding: 1.35rem 1.25rem;
-    }
-    .guarantee-box p { margin: 0.75rem 0 0; font-size: 0.95rem; color: var(--muted); font-weight: 600; }
-    .trust-row {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 0.75rem 1.25rem;
-      margin-top: 1.25rem;
-      font-size: 0.88rem;
-      font-weight: 800;
-      color: var(--navy);
-    }
+    /* ━━━ تعديل قسم الضمان والعرض إلى الستايل الأخضر الملكي ━━━ */
+.guarantee-box {
+  background: linear-gradient(135deg, #0b3c26 0%, #08281b 100%); /* أخضر ملكي داكن وفخم */
+  border: 1px solid #d4af37; /* إطار ذهبي راقي */
+  border-radius: var(--radius);
+  padding: 1.35rem 1.25rem;
+  box-shadow: 0 8px 24px rgba(11, 60, 38, 0.25);
+  text-align: center;
+}
+
+/* العنوان الرئيسي للضمان باللون الذهبي */
+.guarantee-box h3,
+.guarantee-box .section-title {
+  color: #f3e5ab !important; /* لون ذهبي مشرق بارز */
+  font-size: 1.15rem;
+  font-weight: 800;
+  margin: 0;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* النص التوضيحي باللون الأبيض الناصع */
+.guarantee-box p {
+  margin: 0.85rem 0 0;
+  font-size: 0.95rem;
+  color: #ffffff; /* أبيض صريح للوضوح والتباين */
+  font-weight: 600;
+  line-height: 1.65;
+  opacity: 0.95;
+}
+
+/* صف عناصر الثقة والأيقونات السفلية */
+.trust-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem 1.25rem;
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px dashed rgba(212, 175, 55, 0.35); /* خط فاصل ذهبي منقط ناعم */
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #e2f0d9; /* أخضر فاتح ناعم ومريح للعين */
+}
 
     .offers-block { margin-top: 2rem; padding-top: 0.5rem; }
     .offer-lead { font-size: 1.05rem; font-weight: 800; color: var(--navy); text-align: center; margin: 0 0 1.35rem; line-height: 1.55; }
