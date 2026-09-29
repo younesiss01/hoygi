@@ -539,27 +539,35 @@
 
     .offers-block { margin-top: 2rem; padding-top: 0.5rem; }
 
-/* ━━━ تعديل جملة تقديم العرض إلى الأزرق الملكي والذهبي ━━━ */
+/* ━━━ مستطيل تقديم العرض الملكي الكامل ━━━ */
 .offer-lead {
-  background: linear-gradient(135deg, #0a2540 0%, #081a2f 100%); /* أزرق ملكي داكن وفخم */
-  border: 1.5px solid #d4af37; /* إطار ذهبي ملكي */
-  border-radius: var(--radius);
-  padding: 1.1rem 1.25rem;
-  margin: 0 0 1.35rem;
-  font-size: 1.05rem;
-  font-weight: 800;
-  color: #fce8a6; /* كتابة باللون الذهبي الدافئ */
-  text-align: center;
-  line-height: 1.65;
-  box-shadow: 0 8px 24px rgba(10, 37, 64, 0.22);
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  background: #0a2342 !important; /* أزرق ملكي موحد وفخم */
+  border: 2px solid #d4af37 !important; /* إطار ذهبي بارز */
+  border-radius: var(--radius) !important;
+  padding: 1.1rem 1.25rem !important;
+  margin: 0 0 1.35rem !important;
+  font-size: 1.05rem !important;
+  font-weight: 800 !important;
+  color: #f7e08b !important; /* لون الخط الذهبي المشرق */
+  text-align: center !important;
+  line-height: 1.65 !important;
+  box-shadow: 0 8px 24px rgba(10, 35, 66, 0.25) !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) !important;
+  display: block !important;
 }
 
-/* في حال وجود نصوص داخل span لتمييزها باللون الأبيض */
-.offer-lead span {
-  color: #ffffff;
-  text-decoration: underline;
-  text-underline-offset: 4px;
+/* توحيد لون جميع العناصر الداخلية (span / a / strong) بالذهبي وإلغاء أي خلفيات داخلية */
+.offer-lead *, 
+.offer-lead span, 
+.offer-lead a,
+.offer-lead strong {
+  color: #f7e08b !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 .offer-cards { display: flex; flex-direction: column; gap: 1rem; }
