@@ -889,8 +889,13 @@
     })();
 
 /* ━━━ Ultra-Fast Send Order Function ━━━ */
+/* ━━━ Ultra-Fast Send Order Function ━━━ */
     function sendOrder(event) {
-      if (event) event.preventDefault();
+      // منع إعادة تحميل الصفحة أو التمرير للأعلى نهائياً
+      if (event) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
 
       var nameEl  = document.getElementById('name');
       var phoneEl = document.getElementById('phone');
@@ -904,7 +909,7 @@
 
       if (!name || !phone || !pkg) {
         alert('يرجى اختيار العرض وملء جميع البيانات');
-        return;
+        return false;
       }
 
       if (btn) {
@@ -919,7 +924,7 @@
         quantity = '5'; notes = 'عرض 5 سيرومات بـ 299 ريال قطري';
       }
 
-      // إعداد البيانات المبعوثة للـ Google Apps Script
+      // إعداد البيانات
       var params = new URLSearchParams({
         country: 'Qatar',
         name: name,
@@ -933,39 +938,43 @@
         notes: notes
       });
 
-      // إرسال البيانات للسكربت
-      fetch(scriptURL + '?' + params.toString(), { method: 'POST' })
-        .then(function(response) {
-          
-          // 1. تتبع حدث الشراء لـ Meta Pixel
-          if (typeof fbq !== 'undefined') {
-            fbq('track', 'Purchase', {
-              value: parseFloat(price),
-              currency: 'QAR'
-            });
-          }
+      // إرسال البيانات بدعم mode no-cors لضمان عدم توقف الطلب
+      fetch(scriptURL + '?' + params.toString(), { 
+        method: 'POST',
+        mode: 'no-cors'
+      })
+      .then(function() {
+        // 1. تتبع حدث الشراء لـ Meta Pixel
+        if (typeof fbq !== 'undefined') {
+          fbq('track', 'Purchase', {
+            value: parseFloat(price),
+            currency: 'QAR'
+          });
+        }
 
-          // 2. تتبع حدث الشراء لـ TikTok Pixel
-          if (typeof ttq !== 'undefined') {
-            ttq.track('CompletePayment', {
-              content_name: 'HOYGI - Blue Copper Peptide Essence',
-              value: parseFloat(price),
-              currency: 'QAR',
-              quantity: parseInt(quantity)
-            });
-          }
+        // 2. تتبع حدث الشراء لـ TikTok Pixel
+        if (typeof ttq !== 'undefined') {
+          ttq.track('CompletePayment', {
+            content_name: 'HOYGI - Blue Copper Peptide Essence',
+            value: parseFloat(price),
+            currency: 'QAR',
+            quantity: parseInt(quantity)
+          });
+        }
 
-          // 3. التوجيه الفوري لصفحة الشكر
-          window.location.href = 'thankyou.html';
-        })
-        .catch(function(error) {
-          console.error('Order Error:', error);
-          if (btn) {
-            btn.innerText = 'إرسال الطلب الآن';
-            btn.disabled = false;
-          }
-          alert('حدث خطأ أثناء إرسال الطلب، يرجى المحاولة مرة أخرى.');
-        });
+        // 3. التوجيه الفوري لصفحة الشكر
+        window.location.href = 'thankyou.html';
+      })
+      .catch(function(error) {
+        console.error('Order Error:', error);
+        if (btn) {
+          btn.innerText = 'إرسال الطلب الآن';
+          btn.disabled = false;
+        }
+        alert('حدث خطأ أثناء إرسال الطلب، يرجى المحاولة مرة أخرى.');
+      });
+
+      return false;
     }
 
       /* Meta & TikTok Pixels Track */
