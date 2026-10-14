@@ -888,14 +888,9 @@
       }
     })();
 
-/* ━━━ Ultra-Fast Send Order Function ━━━ */
-/* ━━━ Ultra-Fast Send Order Function ━━━ */
+    /* ━━━ Ultra-Fast Send Order Function ━━━ */
     function sendOrder(event) {
-      // منع إعادة تحميل الصفحة أو التمرير للأعلى نهائياً
-      if (event) {
-        event.preventDefault();
-        event.stopPropagation();
-      }
+      if (event) event.preventDefault();
 
       var nameEl  = document.getElementById('name');
       var phoneEl = document.getElementById('phone');
@@ -909,7 +904,7 @@
 
       if (!name || !phone || !pkg) {
         alert('يرجى اختيار العرض وملء جميع البيانات');
-        return false;
+        return;
       }
 
       if (btn) {
@@ -923,59 +918,6 @@
       } else if (pkg === '299') {
         quantity = '5'; notes = 'عرض 5 سيرومات بـ 299 ريال قطري';
       }
-
-      // إعداد البيانات
-      var params = new URLSearchParams({
-        country: 'Qatar',
-        name: name,
-        phone: phone,
-        url: window.location.href,
-        sku: 'MP-BLZZCZV6PTNL',
-        Product: 'HOYGI - Blue Copper Peptide Essence',
-        quantity: quantity,
-        price: price,
-        currency: 'ريال',
-        notes: notes
-      });
-
-      // إرسال البيانات بدعم mode no-cors لضمان عدم توقف الطلب
-      fetch(scriptURL + '?' + params.toString(), { 
-        method: 'POST',
-        mode: 'no-cors'
-      })
-      .then(function() {
-        // 1. تتبع حدث الشراء لـ Meta Pixel
-        if (typeof fbq !== 'undefined') {
-          fbq('track', 'Purchase', {
-            value: parseFloat(price),
-            currency: 'QAR'
-          });
-        }
-
-        // 2. تتبع حدث الشراء لـ TikTok Pixel
-        if (typeof ttq !== 'undefined') {
-          ttq.track('CompletePayment', {
-            content_name: 'HOYGI - Blue Copper Peptide Essence',
-            value: parseFloat(price),
-            currency: 'QAR',
-            quantity: parseInt(quantity)
-          });
-        }
-
-        // 3. التوجيه الفوري لصفحة الشكر
-        window.location.href = 'thankyou.html';
-      })
-      .catch(function(error) {
-        console.error('Order Error:', error);
-        if (btn) {
-          btn.innerText = 'إرسال الطلب الآن';
-          btn.disabled = false;
-        }
-        alert('حدث خطأ أثناء إرسال الطلب، يرجى المحاولة مرة أخرى.');
-      });
-
-      return false;
-    }
 
       /* Meta & TikTok Pixels Track */
       if (typeof fbq !== 'undefined') {
@@ -1006,16 +948,15 @@
       }, 1200);
     }
   </script>
-<!-- Combined Meta & TikTok Pixels Code (Optimized for 100/100 Speed) -->
+<!-- Meta Pixel Code (Optimized for 100/100 Speed) -->
 <script>
   (function() {
-    var pixelsLoaded = false;
+    var pixelLoaded = false;
     
-    function loadPixels() {
-      if (pixelsLoaded) return;
-      pixelsLoaded = true;
+    function loadPixel() {
+      if (pixelLoaded) return;
+      pixelLoaded = true;
       
-      // 1. Meta Pixel
       !function(f,b,e,v,n,t,s)
       {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
       n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -1027,34 +968,18 @@
       
       fbq('init', '1459316576053819');
       fbq('track', 'PageView');
-
-      // 2. TikTok Pixel
-      !function (w, d, t) {
-        w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];
-        ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"];
-        ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};
-        for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);
-        ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e};
-        ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;
-        ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};
-        n=document.createElement("script");n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;
-        e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
-
-        ttq.load('DB7MGB3C77U45L31J2FG');
-        ttq.page();
-      }(window, document, 'ttq');
     }
 
-    // تحميل البيكسلات فور تحريك الصفحة، اللمس، أو الضغط
+    // تحميل البيكسل فور تحريك الصفحة أو اللمس أو بعد 3.5 ثانية تلقائياً
     ['touchstart', 'scroll', 'mousemove', 'click'].forEach(function(ev) {
-      window.addEventListener(ev, loadPixels, { passive: true, once: true });
+      window.addEventListener(ev, loadPixel, { passive: true, once: true });
     });
     
-    // ضمان تحفيز التتبع تلقائياً إذا لم يتحرك المستخدم
+    // ضمان تحفيز التتبع حتى لو لم يتحرك المستخدم
     if ('requestIdleCallback' in window) {
-      requestIdleCallback(function() { setTimeout(loadPixels, 2500); });
+      requestIdleCallback(function() { setTimeout(loadPixel, 2500); });
     } else {
-      setTimeout(loadPixels, 3500);
+      setTimeout(loadPixel, 3500);
     }
   })();
 </script>
@@ -1063,6 +988,6 @@
   <img height="1" width="1" style="display:none"
   src="https://www.facebook.com/tr?id=1459316576053819&ev=PageView&noscript=1" />
 </noscript>
-<!-- End Combined Meta & TikTok Pixels Code -->
+<!-- End Meta Pixel Code -->
 </body>
 </html>
